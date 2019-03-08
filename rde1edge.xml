@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://git.busybox.net/" name="busybox"/>
+  <remote fetch="https://github.com/" name="github"/>
+  <remote fetch="https://git.linaro.org/" name="linaro"/>
+  <remote fetch="https://github.com/ARMmbed/" name="mbedtls"/>
+  <remote fetch="https://git.savannah.gnu.org" name="gnugit"/>
+  <remote fetch="https://git.kernel.org" name="kernel"/>
+  <remote fetch="https://git.trustedfirmware.org" name="trustedfirmware"/>
+
+  <project remote="linaro" name="landing-teams/working/arm/scp-firmware" path="scp" revision="refinfra" upstream="refinfra"/>
+  <project remote="linaro" name="landing-teams/working/arm/arm-tf" path="arm-tf" revision="refinfra" upstream="refinfra"/>
+  <project remote="linaro" name="landing-teams/working/arm/edk2" path="uefi/edk2" revision="refinfra" upstream="refinfra"/>
+  <project remote="linaro" name="landing-teams/working/arm/edk2-platforms" path="uefi/edk2/edk2-platforms" revision="refinfra" upstream="refinfra"/>
+  <project remote="linaro" name="landing-teams/working/arm/kernel-release" path="linux" revision="refinfra" upstream="refinfra"/>
+  <project remote="linaro" name="landing-teams/working/arm/build-scripts" path="build-scripts" revision="refinfra" upstream="refinfra"/>
+  <project remote="linaro" name="landing-teams/working/arm/model-scripts" path="model-scripts" revision="refinfra" upstream="refinfra"/>
+  <project remote="linaro" name="landing-teams/working/arm/uefi-tools" path="tools/uefi-tools" revision="refinfra" upstream="refinfra"/>
+
+  <project remote="github" name="acpica/acpica" path="tools/acpica" revision="refs/tags/R05_31_17"/>
+  <project remote="github" name="ARMmbed/mbedtls.git" path="mbedtls" revision="refs/tags/mbedtls-2.2.1"/>
+  <project remote="github" name="ARM-software/CMSIS_5.git" path="scp/cmsis" revision="refs/tags/5.2.0"/>
+  <project remote="kernel" name="pub/scm/linux/kernel/git/jejb/efitools" path="tools/efitools" revision="master"/>
+  <project remote="busybox" name="busybox" path="busybox" revision="master" upstream="master"/>
+  <project remote="gnugit" name="git/grub" path="grub" revision="f8f35acb5b05d40e3707a9d2db9ede60023e4cac" upstream="master"/>
+  <project remote="linaro" name="landing-teams/working/arm/ramdisk" path="ramdisk" revision="master" upstream="master"/>
+</manifest>
