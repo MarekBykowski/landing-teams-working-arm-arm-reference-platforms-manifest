@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://git.busybox.net/" name="busybox"/>
+  <remote fetch="https://github.com/" name="github"/>
+  <remote fetch="https://git.linaro.org/" name="linaro"/>
+  <remote fetch="https://github.com/ARMmbed/" name="mbedtls"/>
+  <remote fetch="https://git.savannah.gnu.org" name="gnugit"/>
+  <remote fetch="https://git.kernel.org" name="kernel"/>
+  <remote fetch="https://git.trustedfirmware.org" name="trustedfirmware"/>
+
+  <project remote="linaro" name="landing-teams/working/arm/scp-firmware" path="scp" revision="974bd6bbd821d6a78128ca3d55decdbd303fd758"/>
+  <project remote="linaro" name="landing-teams/working/arm/arm-tf" path="arm-tf" revision="d3de9b3b0e69c2944d5eaae4323d309f12f90265"/>
+  <project remote="linaro" name="landing-teams/working/arm/edk2" path="uefi/edk2" revision="bdb7cfdc2aebcd0558e7bb787709319cb683be24"/>
+  <project remote="linaro" name="landing-teams/working/arm/edk2-platforms" path="uefi/edk2/edk2-platforms" revision="9917cb83f6d8e277dfb42e1262f3f7ae0bfdc4fb"/>
+  <project remote="linaro" name="landing-teams/working/arm/kernel-release" path="linux" revision="f304f76cbc68c2461ed54dc58a02494950896234"/>
+  <project remote="linaro" name="landing-teams/working/arm/build-scripts" path="build-scripts" revision="6a8bd6b803865127a2a9d622ddb9c345af01c0e4"/>
+  <project remote="linaro" name="landing-teams/working/arm/model-scripts" path="model-scripts" revision="bc3a6a1c0dd0776cbf82ddb10de44d4833ac7e4d"/>
+  <project remote="linaro" name="landing-teams/working/arm/uefi-tools" path="tools/uefi-tools" revision="71a5b7d93a57bab9bec71c502b9c7b31058c3661"/>
+  <project remote="trustedfirmware" name="TF-A/tf-a-tests" path="validation/comp-test/trusted-firmware-tf" revision="d606e7485b57f2e2dac769e3dfcb651840e4024b"/>
+
+  <project remote="github" name="acpica/acpica" path="tools/acpica" revision="refs/tags/R05_31_17"/>
+  <project remote="github" name="ARMmbed/mbedtls.git" path="mbedtls" revision="refs/tags/mbedtls-2.2.1"/>
+  <project remote="github" name="ARM-software/CMSIS_5.git" path="scp/cmsis" revision="refs/tags/5.2.0"/>
+  <project remote="github" name="ARM-software/arm-enterprise-acs" path="validation/sys-test/arm-enterprise-acs" revision="refs/tags/v18.12_REL1.7"/>
+  <project remote="kernel" name="pub/scm/linux/kernel/git/jejb/efitools" path="tools/efitools" revision="refs/tags/v1.9.2"/>
+  <project remote="busybox" name="busybox" path="busybox" revision="b096ce0fdda0918f9248ff15838cbc31525fa823"/>
+  <project remote="gnugit" name="git/grub" path="grub" revision="41121742df1af73699965a2aab5fb1f5e6555ad5"/>
+  <project remote="linaro" name="landing-teams/working/arm/ramdisk" path="ramdisk" revision="b57c098ca0561ff39aa70b3fe2c795b7a0108717"/>
+</manifest>
