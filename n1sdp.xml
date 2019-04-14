@@ -3,10 +3,9 @@
   <remote name="github" fetch="https://github.com"/>
   <remote name="linaro" fetch="http://git.linaro.org"/>
   <remote fetch="https://git.savannah.gnu.org" name="gnugit"/>
-  <remote fetch="git://git.busybox.net/" name="busybox"/>
 
 
-  <project path="scp" name="ARM-software/SCP-firmware" remote="github" revision="02e6a4e08fc819211fafd90cc9ff6b89307bd0c7" upstream="master"/>
+  <project path="scp" name="ARM-software/SCP-firmware" remote="github" revision="de5b87a1f072aac9be3e59fd09a4cbf035717865" upstream="master"/>
   <project path="scp/cmsis" name="ARM-software/CMSIS_5.git" remote="github" revision="refs/tags/5.2.0" upstream="master"/>
   <project path="arm-tf" name="ARM-software/arm-trusted-firmware" remote="github" revision="f009c5f312476cdfc0704a3c8a9c66b7fe5b6586" upstream="master"/>
   <project path="uefi/edk2" name="tianocore/edk2" remote="github" revision="62a623debd9f7d40823ac1851939f6ee9255382c" upstream="master" sync-s="true"/>
@@ -14,11 +13,10 @@
   <project path="grub" name="git/grub" remote="gnugit" revision="71f9e4ac44142af52c3fc1860436cf9e432bf764" upstream="master"/>
   <project path="tools/acpica" name="acpica/acpica" remote="github" revision="d0126a368a1f712d1d4bf723cd9be663aba88e08" upstream="master"/>
   <project path="linux" name="landing-teams/working/arm/kernel-release" remote="linaro" revision="a65b2b9365fef5fc3642e4e59e49acc98f6695d4" upstream="n1sdp"/>
-  <project name="busybox" remote="busybox" revision="111cdcf295b4cab78521480f52b295d9ae719263" upstream="master"/>
-  <project name="landing-teams/working/arm/build-scripts" path="build-scripts" remote="linaro" revision="ce1d50d5a24fafaecf7eafa3c3e79fc81bdd89d2" upstream="n1sdp"/>
+  <project name="landing-teams/working/arm/build-scripts" path="build-scripts" remote="linaro" revision="c37fbc6407d63ec7b08ca5dcaeb254ed6f820003" upstream="n1sdp"/>
   <project name="landing-teams/working/arm/ramdisk" path="ramdisk" remote="linaro" revision="b57c098ca0561ff39aa70b3fe2c795b7a0108717" upstream="master"/>
   <project name="landing-teams/working/arm/uefi-tools.git" path="tools/uefi-tools" remote="linaro" revision="2c9cffcff80e6318c312771ae5bffd48bc23b6dc" upstream="n1sdp"/>
   <project name="landing-teams/working/arm/n1sdp-pcie-quirk.git" path="n1sdp-pcie-quirk" remote="linaro" revision="776e55978fdb13e45dbd6db155b098bdcb112064" upstream="master"/>
-  <project name="landing-teams/working/arm/n1sdp-board-firmware.git" path="board_firmware" remote="linaro" revision="e1a90159a5b64e022b1cda1845b5d3380c4df2bd" upstream="master"/>
+  <project name="landing-teams/working/arm/n1sdp-board-firmware.git" path="board_firmware" remote="linaro" revision="2f1c2bbb50c006aa62363567d43c5f8f9e177369" upstream="master"/>
 
 </manifest>
