@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="https://git.linaro.org" name="linaro"/>
+
+  <default revision="master" sync-j="8"/>
+
+  <project name="landing-teams/working/arm/yocto-config" path="conf" remote="linaro" revision="corstone700-19.02">
+    <linkfile dest="setup-environment" src="setup-environment"/>
+    <linkfile dest="setup-environment-internal" src="setup-environment-internal"/>
+  </project>
+  <project name="landing-teams/working/arm/yocto-recipes.git" path="layers" remote="linaro" revision="corstone700-19.02"/>
+  <project name="landing-teams/working/arm/meta-yocto" path="layers/meta-yocto" remote="linaro" revision="corstone700-19.02"/>
+  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="corstone700-19.02"/>
+  <project name="openembedded/bitbake" path="bitbake" remote="github"  revision="07b6054b32b37375e2de4b1276bf6fe3f9ad0b04"/>
+  <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro" revision="f729da6f108de091b3077faf3668dd3c95874152"/>
+  <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github" revision="a8aef12ce69ac9cf09b562e59f3c39db9576ecaa"/>
+  <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github" revision="95659bed3f6f3216b346f70cfc9ffae9788c0fc1"/>
+</manifest>
