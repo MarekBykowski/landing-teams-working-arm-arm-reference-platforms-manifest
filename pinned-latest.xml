@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="git://git.busybox.net/" name="busybox"/>
+  <remote fetch="https://github.com/" name="github"/>
+  <remote fetch="https://git.linaro.org/" name="linaro"/>
+  <remote fetch="https://github.com/ARMmbed/" name="mbedtls"/>
+  <remote fetch="https://github.com/OP-TEE/" name="optee"/>
+
+  <project name="ARM-software/arm-trusted-firmware" path="arm-tf" remote="github" revision="b73d296d747663ecd31caf30ddcebf4a99f39abf" upstream="master"/>
+  <project name="acpica/acpica" path="tools/acpica" remote="github" revision="d0126a368a1f712d1d4bf723cd9be663aba88e08" upstream="master"/>
+  <project name="arm/vexpress-firmware" path="recovery" remote="linaro" revision="c563efd51d08a1bdaebdd100888a986c5bc7afe9" upstream="juno"/>
+  <project name="arm/vexpress-firmware" path="vexpress-firmware" remote="linaro" revision="d9e8f81e7beeeeb0ffade64dc0b689e4fa11909e" upstream="vexpress"/>
+  <project name="busybox" remote="busybox" revision="111cdcf295b4cab78521480f52b295d9ae719263" upstream="master"/>
+  <project name="landing-teams/working/arm/build-scripts" path="build-scripts" remote="linaro" revision="d3be5eeb171a0c3ff76d298088fe315bbdfe445e" upstream="armlt"/>
+  <project name="landing-teams/working/arm/kernel-release" path="linux" remote="linaro" revision="0642f98830e15a834c891448e87f177cb0ac36f2" upstream="latest-5.1-armlt-19.06"/>
+  <project name="landing-teams/working/arm/model-scripts" path="model-scripts" remote="linaro" revision="ac4ac28dfa290c88defda72a4886744347f2fa5e" upstream="master"/>
+  <project name="landing-teams/working/arm/ramdisk" path="ramdisk" remote="linaro" revision="b57c098ca0561ff39aa70b3fe2c795b7a0108717" upstream="master"/>
+  <project name="landing-teams/working/arm/u-boot" path="u-boot" remote="linaro" revision="4030ac7109f7e1341d760cb11bc43f499c49986e" upstream="master"/>
+  <project name="mbedtls.git" path="mbedtls" remote="mbedtls" revision="fb1972db23da39bd11d4f9c9ea6266eee665605b" upstream="master"/>
+  <project name="optee_client.git" path="optee/optee_client" remote="optee" revision="09b69afa5e9e74aac39e383d74f14b4d61c90476" upstream="master"/>
+  <project name="optee_os.git" path="optee/optee_os" remote="optee" revision="94ee4938f7f544d07d11721a355f445c020663ca" upstream="master"/>
+  <project name="tianocore/edk2" path="uefi/edk2" remote="github" revision="005c855dc6be0f61f76de0d7ec4a62ee737518d6" upstream="master"/>
+  <project name="tianocore/edk2-platforms" path="uefi/edk2/edk2-platforms" remote="github" revision="80f6be6eb12b45c79e6cbaee36bd59392f797ff6" upstream="master"/>
+  <project name="uefi/uefi-tools.git" path="tools/uefi-tools" remote="linaro" revision="bb3cae00ef4f726b89972f3b1470ed1a9e802806" upstream="master"/>
+</manifest>

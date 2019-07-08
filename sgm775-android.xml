@@ -1,0 +1,624 @@
+<manifest>
+  <remote fetch="git://git.busybox.net/" name="busybox"/>
+  <remote fetch="https://github.com/" name="github"/>
+  <remote fetch="https://git.linaro.org/" name="linaro"/>
+  <remote fetch="https://github.com/ARMmbed/" name="mbedtls"/>
+  <remote fetch="https://github.com/OP-TEE/" name="optee"/>
+
+  <project name="ARM-software/arm-trusted-firmware" path="arm-tf" remote="github" revision="b73d296d747663ecd31caf30ddcebf4a99f39abf" upstream="master"/>
+  <project name="ARM-software/SCP-firmware" path="scp" remote="github" revision="8980a26ee995c51d00e1f5fc654fba30cce42145" upstream="master"/>
+  <project name="acpica/acpica" path="tools/acpica" remote="github" revision="d0126a368a1f712d1d4bf723cd9be663aba88e08" upstream="master"/>
+  <project name="busybox" remote="busybox" revision="111cdcf295b4cab78521480f52b295d9ae719263" upstream="master"/>
+  <project name="landing-teams/working/arm/u-boot" path="u-boot" remote="linaro" revision="sgm"/>
+  <project name="landing-teams/working/arm/build-scripts" path="build-scripts" remote="linaro" revision="18.10" upstream="armlt"/>
+  <project name="landing-teams/working/arm/kernel-release" path="linux" remote="linaro" revision="ack-4.9-armlt-18.10"/>
+  <project name="landing-teams/working/arm/model-scripts" path="model-scripts" remote="linaro" revision="18.10"/>
+  <project name="landing-teams/working/arm/ramdisk" path="ramdisk" remote="linaro" revision="b57c098ca0561ff39aa70b3fe2c795b7a0108717" upstream="master"/>
+  <project name="landing-teams/working/arm/device-tree" path="device-tree" remote="linaro" revision="49c641794baac80a156afdffa788831f380668b4" upstream="master"/>
+  <project name="mbedtls.git" path="mbedtls" remote="mbedtls" revision="7d728bd70e6a8d129ee07813da1538de1bf95cb2" upstream="master"/>
+  <project name="optee_client.git" path="optee/optee_client" remote="optee" revision="73b4e490a8ed0b4a7714818e80998b9d8a7da958" upstream="master"/>
+  <project name="optee_os.git" path="optee/optee_os" remote="optee" revision="fefbee97c9e888dd11acff497b6f8b515b70d1ca" upstream="master"/>
+  <project name="tianocore/edk2" path="uefi/edk2" remote="github" revision="005c855dc6be0f61f76de0d7ec4a62ee737518d6" upstream="master"/>
+  <project name="tianocore/edk2-platforms" path="uefi/edk2/edk2-platforms" remote="github" revision="80f6be6eb12b45c79e6cbaee36bd59392f797ff6" upstream="master"/>
+  <project name="uefi/uefi-tools.git" path="tools/uefi-tools" remote="linaro" revision="bb3cae00ef4f726b89972f3b1470ed1a9e802806" upstream="master"/>
+
+  <remote fetch="https://android-review.googlesource.com/" name="aosp" />
+  <default remote="aosp" revision="refs/tags/android-8.0.0_r4" sync-j="4" />
+
+  <project groups="pdk" name="platform/build" path="android/build/make">
+    <copyfile dest="android/Makefile" src="core/root.mk" />
+    <linkfile dest="android/build/CleanSpec.mk" src="CleanSpec.mk" />
+    <linkfile dest="android/build/buildspec.mk.default" src="buildspec.mk.default" />
+    <linkfile dest="android/build/core" src="core" />
+    <linkfile dest="android/build/envsetup.sh" src="envsetup.sh" />
+    <linkfile dest="android/build/target" src="target" />
+    <linkfile dest="android/build/tools" src="tools" />
+  </project>
+  <project groups="pdk,tradefed" name="platform/build/blueprint" path="android/build/blueprint" />
+  <project groups="pdk,tradefed" name="platform/build/kati" path="android/build/kati" />
+  <project groups="pdk,tradefed" name="platform/build/soong" path="android/build/soong">
+    <linkfile dest="android/Android.bp" src="root.bp" />
+    <linkfile dest="android/bootstrap.bash" src="bootstrap.bash" />
+  </project>
+  <project groups="pdk" name="platform/art" path="android/art" />
+  <project groups="pdk" name="platform/bionic" path="android/bionic" />
+  <project groups="pdk" name="platform/bootable/recovery" path="android/bootable/recovery" />
+  <project groups="cts,pdk-cw-fs,pdk-fs" name="platform/cts" path="android/cts" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/dalvik" path="android/dalvik" />
+  <project name="platform/developers/build" path="android/developers/build" />
+  <project name="platform/developers/demos" path="android/developers/demos" />
+  <project name="platform/developers/samples/android" path="android/developers/samples/android" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/development" path="android/development" />
+  <project groups="device,fugu,broadcom_pdk,pdk" name="device/asus/fugu" path="android/device/asus/fugu" />
+  <project clone-depth="1" groups="device,fugu,broadcom_pdk,pdk" name="device/asus/fugu-kernel" path="android/device/asus/fugu-kernel" />
+  <project groups="pdk-cw-fs,pdk" name="device/common" path="android/device/common" />
+  <project groups="pdk" name="device/generic/arm64" path="android/device/generic/arm64" />
+  <project groups="pdk" name="device/generic/armv7-a-neon" path="android/device/generic/armv7-a-neon" />
+  <project groups="pdk" name="device/generic/car" path="android/device/generic/car" />
+  <project groups="pdk" name="device/generic/common" path="android/device/generic/common" />
+  <project groups="pdk" name="device/generic/goldfish" path="android/device/generic/goldfish" />
+  <project groups="pdk" name="device/generic/goldfish-opengl" path="android/device/generic/goldfish-opengl" />
+  <project groups="pdk" name="device/generic/mips" path="android/device/generic/mips" />
+  <project groups="pdk" name="device/generic/mips64" path="android/device/generic/mips64" />
+  <project groups="pdk" name="device/generic/mini-emulator-arm64" path="android/device/generic/mini-emulator-arm64" />
+  <project groups="pdk" name="device/generic/mini-emulator-armv7-a-neon" path="android/device/generic/mini-emulator-armv7-a-neon" />
+  <project groups="pdk" name="device/generic/mini-emulator-mips" path="android/device/generic/mini-emulator-mips" />
+  <project groups="pdk" name="device/generic/mini-emulator-mips64" path="android/device/generic/mini-emulator-mips64" />
+  <project groups="pdk" name="device/generic/mini-emulator-x86" path="android/device/generic/mini-emulator-x86" />
+  <project groups="pdk" name="device/generic/mini-emulator-x86_64" path="android/device/generic/mini-emulator-x86_64" />
+  <project groups="pdk" name="device/generic/qemu" path="android/device/generic/qemu" />
+  <project groups="pdk" name="device/generic/x86" path="android/device/generic/x86" />
+  <project groups="pdk" name="device/generic/x86_64" path="android/device/generic/x86_64" />
+  <project groups="device,pdk" name="device/google/accessory/arduino" path="android/device/google/accessory/arduino" />
+  <project groups="device,pdk" name="device/google/accessory/demokit" path="android/device/google/accessory/demokit" />
+  <project groups="device,fugu,broadcom_pdk,generic_fs,pdk" name="device/google/atv" path="android/device/google/atv" />
+  <project groups="device,marlin,pdk" name="device/google/contexthub" path="android/device/google/contexthub" />
+  <project groups="device,dragon,pdk" name="device/google/dragon" path="android/device/google/dragon" />
+  <project clone-depth="1" groups="device,dragon,pdk" name="device/google/dragon-kernel" path="android/device/google/dragon-kernel" />
+  <project groups="device,marlin" name="device/google/marlin" path="android/device/google/marlin" />
+  <project clone-depth="1" groups="device,marlin" name="device/google/marlin-kernel" path="android/device/google/marlin-kernel" />
+  <project clone-depth="1" groups="pdk" name="device/google/vrservices" path="android/device/google/vrservices" />
+  <project groups="device,angler,broadcom_pdk,pdk" name="device/huawei/angler" path="android/device/huawei/angler" />
+  <project clone-depth="1" groups="device,angler,broadcom_pdk,pdk" name="device/huawei/angler-kernel" path="android/device/huawei/angler-kernel" />
+  <project groups="device,bullhead,pdk" name="device/lge/bullhead" path="android/device/lge/bullhead" />
+  <project clone-depth="1" groups="device,bullhead,pdk" name="device/lge/bullhead-kernel" path="android/device/lge/bullhead-kernel" />
+  <project name="device/linaro/bootloader/arm-trusted-firmware" path="android/device/linaro/bootloader/arm-trusted-firmware" />
+  <project name="device/linaro/bootloader/edk2" path="android/device/linaro/bootloader/edk2" />
+  <project name="device/linaro/bootloader/OpenPlatformPkg" path="android/device/linaro/bootloader/OpenPlatformPkg" />
+  <project groups="device,hikey,pdk" name="device/linaro/hikey" path="android/device/linaro/hikey" />
+  <project clone-depth="1" groups="device,hikey,pdk" name="device/linaro/hikey-kernel" path="android/device/linaro/hikey-kernel" />
+  <project groups="pdk" name="device/sample" path="android/device/sample" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/docs/source.android.com" path="android/docs/source.android.com" />
+  <project groups="pdk" name="platform/external/aac" path="android/external/aac" />
+  <project groups="pdk" name="platform/external/abi-compliance-checker" path="android/external/abi-compliance-checker" />
+  <project groups="pdk" name="platform/external/abi-dumper" path="android/external/abi-dumper" />
+  <project groups="adt-infra,notdefault,pdk-fs" name="platform/external/adt-infra" path="android/external/adt-infra" />
+  <project groups="pdk" name="platform/external/android-clat" path="android/external/android-clat" />
+  <project groups="pdk" name="platform/external/androidplot" path="android/external/androidplot" />
+  <project groups="pdk" name="platform/external/ant-glob" path="android/external/ant-glob" />
+  <project groups="pdk" name="platform/external/antlr" path="android/external/antlr" />
+  <project groups="pdk" name="platform/external/apache-commons-math" path="android/external/apache-commons-math" />
+  <project groups="pdk" name="platform/external/apache-harmony" path="android/external/apache-harmony" />
+  <project groups="pdk" name="platform/external/apache-http" path="android/external/apache-http" />
+  <project groups="pdk" name="platform/external/apache-xml" path="android/external/apache-xml" />
+  <project groups="pdk" name="platform/external/archive-patcher" path="android/external/archive-patcher" />
+  <project groups="vendor" name="platform/external/arm-neon-tests" path="android/external/arm-neon-tests" />
+  <project groups="pdk-fs" name="platform/external/autotest" path="android/external/autotest" />
+  <project groups="pdk" name="platform/external/avb" path="android/external/avb" />
+  <project groups="pdk" name="platform/external/bison" path="android/external/bison" />
+  <project groups="pdk" name="platform/external/blktrace" path="android/external/blktrace" />
+  <project groups="pdk" name="platform/external/boringssl" path="android/external/boringssl" />
+  <project groups="pdk" name="platform/external/bouncycastle" path="android/external/bouncycastle" />
+  <project groups="pdk" name="platform/external/bsdiff" path="android/external/bsdiff" />
+  <project groups="pdk" name="platform/external/bzip2" path="android/external/bzip2" />
+  <project groups="pdk" name="platform/external/c-ares" path="android/external/c-ares" />
+  <project groups="pdk" name="platform/external/caliper" path="android/external/caliper" />
+  <project groups="pdk" name="platform/external/cblas" path="android/external/cblas" />
+  <project groups="pdk" name="platform/external/chromium-libpac" path="android/external/chromium-libpac" />
+  <project groups="pdk" name="platform/external/chromium-trace" path="android/external/chromium-trace" />
+  <project clone-depth="1" groups="pdk" name="platform/external/chromium-webview" path="android/external/chromium-webview" />
+  <project groups="pdk" name="platform/external/clang" path="android/external/clang" />
+  <project groups="pdk" name="platform/external/cmockery" path="android/external/cmockery" />
+  <project groups="pdk" name="platform/external/compiler-rt" path="android/external/compiler-rt" />
+  <project groups="pdk" name="platform/external/conscrypt" path="android/external/conscrypt" />
+  <project groups="pdk" name="platform/external/crcalc" path="android/external/crcalc" />
+  <project groups="pdk" name="platform/external/cros/system_api" path="android/external/cros/system_api" />
+  <project groups="pdk" name="platform/external/curl" path="android/external/curl" />
+  <project groups="pdk" name="platform/external/dagger2" path="android/external/dagger2" />
+  <project groups="pdk-fs" name="platform/external/deqp" path="android/external/deqp" />
+  <project groups="pdk" name="platform/external/dexmaker" path="android/external/dexmaker" />
+  <project groups="pdk" name="platform/external/desugar" path="android/external/desugar" />
+  <project groups="pdk" name="platform/external/dhcpcd-6.8.2" path="android/external/dhcpcd-6.8.2" />
+  <project groups="pdk" name="platform/external/dng_sdk" path="android/external/dng_sdk" />
+  <project groups="pdk" name="platform/external/dlmalloc" path="android/external/dlmalloc" />
+  <project groups="pdk" name="platform/external/dnsmasq" path="android/external/dnsmasq" />
+  <project groups="pdk" name="platform/external/doclava" path="android/external/doclava" />
+  <project groups="pdk" name="platform/external/donuts" path="android/external/donuts" />
+  <project groups="drm_gralloc,pdk-fs" name="platform/external/drm_gralloc" path="android/external/drm_gralloc" />
+  <project groups="drm_hwcomposer,pdk-fs" name="platform/external/drm_hwcomposer" path="android/external/drm_hwcomposer" />
+  <project groups="pdk" name="platform/external/droiddriver" path="android/external/droiddriver" />
+  <project groups="pdk" name="platform/external/dtc" path="android/external/dtc" />
+  <project groups="pdk" name="platform/external/e2fsprogs" path="android/external/e2fsprogs" />
+  <project groups="pdk" name="platform/external/easymock" path="android/external/easymock" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/eclipse-basebuilder" path="android/external/eclipse-basebuilder" />
+  <project groups="pdk" name="platform/external/eclipse-windowbuilder" path="android/external/eclipse-windowbuilder" />
+  <project groups="pdk" name="platform/external/eigen" path="android/external/eigen" />
+  <project groups="pdk" name="platform/external/elfutils" path="android/external/elfutils" />
+  <project groups="pdk" name="platform/external/emma" path="android/external/emma" />
+  <project groups="pdk" name="platform/external/esd" path="android/external/esd" />
+  <project groups="pdk" name="platform/external/expat" path="android/external/expat" />
+  <project groups="pdk" name="platform/external/eyes-free" path="android/external/eyes-free" />
+  <project groups="pdk" name="platform/external/f2fs-tools" path="android/external/f2fs-tools" />
+  <project groups="pdk" name="platform/external/fdlibm" path="android/external/fdlibm" />
+  <project groups="pdk" name="platform/external/fec" path="android/external/fec" />
+  <project groups="pdk" name="platform/external/fio" path="android/external/fio" />
+  <project groups="pdk" name="platform/external/flac" path="android/external/flac" />
+  <project groups="pdk" name="platform/external/flatbuffers" path="android/external/flatbuffers" />
+  <project groups="pdk" name="platform/external/fonttools" path="android/external/fonttools" />
+  <project groups="pdk" name="platform/external/fmtlib" path="android/external/fmtlib" />
+  <project groups="pdk" name="platform/external/freetype" path="android/external/freetype" />
+  <project groups="pdk" name="platform/external/fsck_msdos" path="android/external/fsck_msdos" />
+  <project groups="pdk" name="platform/external/gemmlowp" path="android/external/gemmlowp" />
+  <project groups="pdk,qcom_msm8x26" name="platform/external/giflib" path="android/external/giflib" />
+  <project groups="pdk" name="platform/external/glide" path="android/external/glide" />
+  <project groups="pdk" name="platform/external/google-benchmark" path="android/external/google-benchmark" />
+  <project groups="dragon,pdk-fs" name="platform/external/google-breakpad" path="android/external/google-breakpad" />
+  <project groups="pdk" name="platform/external/google-fonts/carrois-gothic-sc" path="android/external/google-fonts/carrois-gothic-sc" />
+  <project groups="pdk" name="platform/external/google-fonts/coming-soon" path="android/external/google-fonts/coming-soon" />
+  <project groups="pdk" name="platform/external/google-fonts/cutive-mono" path="android/external/google-fonts/cutive-mono" />
+  <project groups="pdk" name="platform/external/google-fonts/dancing-script" path="android/external/google-fonts/dancing-script" />
+  <project groups="pdk" name="platform/external/google-tv-pairing-protocol" path="android/external/google-tv-pairing-protocol" />
+  <project groups="pdk" name="platform/external/googletest" path="android/external/googletest" />
+  <project groups="pdk" name="platform/external/gptfdisk" path="android/external/gptfdisk" />
+  <project groups="pdk" name="platform/external/guava" path="android/external/guava" />
+  <project groups="pdk" name="platform/external/guice" path="android/external/guice" />
+  <project groups="pdk" name="platform/external/hamcrest" path="android/external/hamcrest" />
+  <project groups="pdk,qcom_msm8x26" name="platform/external/harfbuzz_ng" path="android/external/harfbuzz_ng" />
+  <project groups="pdk" name="platform/external/hyphenation-patterns" path="android/external/hyphenation-patterns" />
+  <project groups="pdk" name="platform/external/icu" path="android/external/icu" />
+  <project groups="pdk" name="platform/external/ImageMagick" path="android/external/ImageMagick" />
+  <project groups="pdk" name="platform/external/ims" path="android/external/ims" />
+  <project groups="pdk" name="platform/external/iproute2" path="android/external/iproute2" />
+  <project groups="pdk" name="platform/external/ipsec-tools" path="android/external/ipsec-tools" />
+  <project groups="pdk" name="platform/external/iptables" path="android/external/iptables" />
+  <project groups="pdk" name="platform/external/iputils" path="android/external/iputils" />
+  <project groups="pdk" name="platform/external/iw" path="android/external/iw" />
+  <project groups="pdk" name="platform/external/jacoco" path="android/external/jacoco" />
+  <project groups="pdk" name="platform/external/jarjar" path="android/external/jarjar" />
+  <project groups="pdk" name="platform/external/javasqlite" path="android/external/javasqlite" />
+  <project groups="pdk" name="platform/external/javassist" path="android/external/javassist" />
+  <project groups="pdk" name="platform/external/jcommander" path="android/external/jcommander" />
+  <project groups="pdk" name="platform/external/jdiff" path="android/external/jdiff" />
+  <project groups="pdk" name="platform/external/jemalloc" path="android/external/jemalloc" />
+  <project groups="pdk,tradefed,pdk-fs" name="platform/external/jline" path="android/external/jline" />
+  <project groups="pdk" name="platform/external/jmdns" path="android/external/jmdns" />
+  <project groups="pdk" name="platform/external/jsilver" path="android/external/jsilver" />
+  <project groups="pdk" name="platform/external/jsmn" path="android/external/jsmn" />
+  <project groups="pdk" name="platform/external/jsoncpp" path="android/external/jsoncpp" />
+  <project groups="pdk" name="platform/external/jsr305" path="android/external/jsr305" />
+  <project groups="pdk" name="platform/external/jsr330" path="android/external/jsr330" />
+  <project groups="pdk" name="platform/external/junit" path="android/external/junit" />
+  <project groups="pdk" name="platform/external/junit-params" path="android/external/junit-params" />
+  <project groups="pdk" name="platform/external/kernel-headers" path="android/external/kernel-headers" />
+  <project groups="pdk" name="platform/external/kmod" path="android/external/kmod" />
+  <project groups="pdk" name="platform/external/ksoap2" path="android/external/ksoap2" />
+  <project groups="pdk" name="platform/external/libavc" path="android/external/libavc" />
+  <project groups="pdk" name="platform/external/libbrillo" path="android/external/libbrillo" />
+  <project groups="pdk" name="platform/external/libcap" path="android/external/libcap" />
+  <project groups="pdk" name="platform/external/libcap-ng" path="android/external/libcap-ng" />
+  <project groups="pdk" name="platform/external/libchrome" path="android/external/libchrome" />
+  <project groups="pdk" name="platform/external/libconstrainedcrypto" path="android/external/libconstrainedcrypto" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libcups" path="android/external/libcups" />
+  <project groups="pdk" name="platform/external/libcxx" path="android/external/libcxx" />
+  <project groups="pdk" name="platform/external/libcxxabi" path="android/external/libcxxabi" />
+  <project groups="pdk" name="platform/external/libdivsufsort" path="android/external/libdivsufsort" />
+  <project groups="pdk" name="platform/external/libdrm" path="android/external/libdrm" />
+  <project groups="pdk" name="platform/external/libedit" path="android/external/libedit" />
+  <project groups="pdk" name="platform/external/libese" path="android/external/libese" />
+  <project groups="pdk" name="platform/external/libdaemon" path="android/external/libdaemon" />
+  <project groups="pdk" name="platform/external/libevent" path="android/external/libevent" />
+  <project groups="pdk" name="platform/external/libexif" path="android/external/libexif" />
+  <project groups="pdk" name="platform/external/libgsm" path="android/external/libgsm" />
+  <project groups="pdk" name="platform/external/libhevc" path="android/external/libhevc" />
+  <project groups="pdk" name="platform/external/libjpeg-turbo" path="android/external/libjpeg-turbo" />
+  <project groups="pdk" name="platform/external/libldac" path="android/external/libldac" />
+  <project groups="pdk" name="platform/external/liblzf" path="android/external/liblzf" />
+  <project groups="pdk" name="platform/external/libmicrohttpd" path="android/external/libmicrohttpd" />
+  <project groups="pdk" name="platform/external/libmojo" path="android/external/libmojo" />
+  <project groups="pdk" name="platform/external/libmpeg2" path="android/external/libmpeg2" />
+  <project groups="pdk" name="platform/external/libmtp" path="android/external/libmtp" />
+  <project groups="pdk" name="platform/external/libnetfilter_conntrack" path="android/external/libnetfilter_conntrack" />
+  <project groups="pdk" name="platform/external/libnfnetlink" path="android/external/libnfnetlink" />
+  <project groups="pdk" name="platform/external/libnl" path="android/external/libnl" />
+  <project groups="pdk" name="platform/external/libogg" path="android/external/libogg" />
+  <project groups="pdk" name="platform/external/libopus" path="android/external/libopus" />
+  <project groups="pdk" name="platform/external/libpcap" path="android/external/libpcap" />
+  <project groups="pdk" name="platform/external/libphonenumber" path="android/external/libphonenumber" />
+  <project groups="pdk" name="platform/external/libpng" path="android/external/libpng" />
+  <project groups="pdk" name="platform/external/libunwind" path="android/external/libunwind" />
+  <project groups="pdk" name="platform/external/libunwind_llvm" path="android/external/libunwind_llvm" />
+  <project groups="pdk" name="platform/external/libusb" path="android/external/libusb" />
+  <project groups="pdk" name="platform/external/libusb-compat" path="android/external/libusb-compat" />
+  <project groups="pdk" name="platform/external/libutf" path="android/external/libutf" />
+  <project groups="pdk" name="platform/external/libvncserver" path="android/external/libvncserver" />
+  <project groups="pdk" name="platform/external/libvorbis" path="android/external/libvorbis" />
+  <project groups="pdk" name="platform/external/libvpx" path="android/external/libvpx" />
+  <project groups="pdk" name="platform/external/libvterm" path="android/external/libvterm" />
+  <project groups="pdk,libxml2" name="platform/external/libxml2" path="android/external/libxml2" />
+  <project groups="pdk" name="platform/external/libtextclassifier" path="android/external/libtextclassifier" />
+  <project groups="pdk,libyuv" name="platform/external/libyuv" path="android/external/libyuv" />
+  <project groups="vts,pdk" name="platform/external/linux-kselftest" path="android/external/linux-kselftest" />
+  <project groups="pdk" name="platform/external/littlemock" path="android/external/littlemock" />
+  <project groups="pdk" name="platform/external/lld" path="android/external/lld" />
+  <project groups="pdk" name="platform/external/llvm" path="android/external/llvm" />
+  <project groups="vts,pdk" name="platform/external/ltp" path="android/external/ltp" />
+  <project groups="pdk" name="platform/external/lz4" path="android/external/lz4" />
+  <project groups="pdk" name="platform/external/lzma" path="android/external/lzma" />
+  <project groups="pdk" name="platform/external/markdown" path="android/external/markdown" />
+  <project groups="pdk" name="platform/external/mdnsresponder" path="android/external/mdnsresponder" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/mesa3d" path="android/external/mesa3d" />
+  <project groups="pdk" name="platform/external/messageformat" path="android/external/messageformat" />
+  <project groups="pdk" name="platform/external/Microsoft-GSL" path="android/external/Microsoft-GSL" />
+  <project groups="pdk" name="platform/external/minijail" path="android/external/minijail" />
+  <project groups="pdk" name="platform/external/mksh" path="android/external/mksh" />
+  <project groups="pdk" name="platform/external/mmc-utils" path="android/external/mmc-utils" />
+  <project groups="pdk" name="platform/external/mockftpserver" path="android/external/mockftpserver" />
+  <project groups="pdk" name="platform/external/mockito" path="android/external/mockito" />
+  <project groups="pdk" name="platform/external/mockwebserver" path="android/external/mockwebserver" />
+  <project groups="pdk" name="platform/external/modp_b64" path="android/external/modp_b64" />
+  <project groups="pdk" name="platform/external/mp4parser" path="android/external/mp4parser" />
+  <project groups="pdk" name="platform/external/mtpd" path="android/external/mtpd" />
+  <project groups="pdk" name="platform/external/nanohttpd" path="android/external/nanohttpd" />
+  <project groups="pdk" name="platform/external/nanopb-c" path="android/external/nanopb-c" />
+  <project groups="pdk" name="platform/external/naver-fonts" path="android/external/naver-fonts" />
+  <project groups="pdk" name="platform/external/netcat" path="android/external/netcat" />
+  <project groups="pdk" name="platform/external/netperf" path="android/external/netperf" />
+  <project groups="pdk" name="platform/external/neven" path="android/external/neven" />
+  <project groups="pdk" name="platform/external/nfacct" path="android/external/nfacct" />
+  <project groups="pdk" name="platform/external/nist-pkits" path="android/external/nist-pkits" />
+  <project groups="pdk" name="platform/external/nist-sip" path="android/external/nist-sip" />
+  <project groups="pdk" name="platform/external/noto-fonts" path="android/external/noto-fonts" />
+  <project groups="pdk" name="platform/external/oauth" path="android/external/oauth" />
+  <project groups="pdk" name="platform/external/objenesis" path="android/external/objenesis" />
+  <project groups="pdk" name="platform/external/okhttp" path="android/external/okhttp" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/opencv" path="android/external/opencv" />
+  <project groups="pdk" name="platform/external/openssh" path="android/external/openssh" />
+  <project groups="pdk" name="platform/external/owasp/sanitizer" path="android/external/owasp/sanitizer" />
+  <project groups="pdk" name="platform/external/parameter-framework" path="android/external/parameter-framework" />
+  <project groups="pdk" name="platform/external/pcre" path="android/external/pcre" />
+  <project groups="pdk" name="platform/external/pdfium" path="android/external/pdfium" />
+  <project groups="pdk" name="platform/external/piex" path="android/external/piex" />
+  <project groups="pdk" name="platform/external/ppp" path="android/external/ppp" />
+  <project groups="pdk" name="platform/external/proguard" path="android/external/proguard" />
+  <project groups="pdk" name="platform/external/protobuf" path="android/external/protobuf" />
+  <project groups="pdk" name="platform/external/regex-re2" path="android/external/regex-re2" />
+  <project groups="pdk" name="platform/external/replicaisland" path="android/external/replicaisland" />
+  <project groups="pdk" name="platform/external/rmi4utils" path="android/external/rmi4utils" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/robolectric" path="android/external/robolectric" />
+  <project groups="pdk" name="platform/external/roboto-fonts" path="android/external/roboto-fonts" />
+  <project groups="pdk" name="platform/external/rootdev" path="android/external/rootdev" />
+  <project groups="pdk" name="platform/external/safe-iop" path="android/external/safe-iop" />
+  <project groups="pdk" name="platform/external/scrypt" path="android/external/scrypt" />
+  <project groups="pdk" name="platform/external/seccomp-tests" path="android/external/seccomp-tests" />
+  <project groups="pdk" name="platform/external/selinux" path="android/external/selinux" />
+  <project groups="pdk" name="platform/external/shflags" path="android/external/shflags" />
+  <project groups="pdk,qcom_msm8x26" name="platform/external/sfntly" path="android/external/sfntly" />
+  <project groups="pdk,qcom_msm8x26" name="platform/external/skia" path="android/external/skia" />
+  <project groups="pdk" name="platform/external/sl4a" path="android/external/sl4a" />
+  <project groups="pdk" name="platform/external/slf4j" path="android/external/slf4j" />
+  <project groups="pdk" name="platform/external/smali" path="android/external/smali" />
+  <project groups="pdk" name="platform/external/snakeyaml" path="android/external/snakeyaml" />
+  <project groups="pdk" name="platform/external/sonic" path="android/external/sonic" />
+  <project name="platform/external/spirv-llvm" path="android/external/spirv-llvm" />
+  <project groups="pdk" name="platform/external/sonivox" path="android/external/sonivox" />
+  <project groups="pdk" name="platform/external/speex" path="android/external/speex" />
+  <project groups="pdk" name="platform/external/sqlite" path="android/external/sqlite" />
+  <project groups="pdk" name="platform/external/squashfs-tools" path="android/external/squashfs-tools" />
+  <project groups="pdk" name="platform/external/strace" path="android/external/strace" />
+  <project groups="pdk" name="platform/external/stressapptest" path="android/external/stressapptest" />
+  <project groups="pdk" name="platform/external/svox" path="android/external/svox" />
+  <project groups="pdk" name="platform/external/syslinux" path="android/external/syslinux" />
+  <project groups="pdk" name="platform/external/swiftshader" path="android/external/swiftshader" />
+  <project groups="pdk" name="platform/external/tagsoup" path="android/external/tagsoup" />
+  <project groups="pdk" name="platform/external/testng" path="android/external/testng" />
+  <project groups="pdk" name="platform/external/tcpdump" path="android/external/tcpdump" />
+  <project groups="pdk" name="platform/external/timezonepicker-support" path="android/external/timezonepicker-support" />
+  <project groups="pdk" name="platform/external/tinyalsa" path="android/external/tinyalsa" />
+  <project groups="pdk" name="platform/external/tinycompress" path="android/external/tinycompress" />
+  <project groups="pdk" name="platform/external/tinyxml" path="android/external/tinyxml" />
+  <project groups="pdk" name="platform/external/tinyxml2" path="android/external/tinyxml2" />
+  <project name="platform/external/toolchain-utils" path="android/external/toolchain-utils" />
+  <project groups="pdk" name="platform/external/toybox" path="android/external/toybox" />
+  <project groups="pdk" name="platform/external/tpm2" path="android/external/tpm2" />
+  <project groups="pdk" name="platform/external/tremolo" path="android/external/tremolo" />
+  <project groups="pdk" name="platform/external/unicode" path="android/external/unicode" />
+  <project name="platform/external/universal-tween-engine" path="android/external/universal-tween-engine" />
+  <project groups="pdk" name="platform/external/v8" path="android/external/v8" />
+  <project groups="pdk" name="platform/external/valgrind" path="android/external/valgrind" />
+  <project groups="vboot,pdk-fs" name="platform/external/vboot_reference" path="android/external/vboot_reference" />
+  <project groups="pdk" name="platform/external/vixl" path="android/external/vixl" />
+  <project groups="pdk" name="platform/external/vogar" path="android/external/vogar" />
+  <project groups="pdk" name="platform/external/volley" path="android/external/volley" />
+  <project groups="pdk" name="platform/external/vulkan-validation-layers" path="android/external/vulkan-validation-layers" />
+  <project groups="pdk,qcom_msm8x26" name="platform/external/webp" path="android/external/webp" />
+  <project groups="pdk" name="platform/external/webrtc" path="android/external/webrtc" />
+  <project groups="pdk" name="platform/external/wpa_supplicant_8" path="android/external/wpa_supplicant_8" />
+  <project groups="pdk" name="platform/external/wycheproof" path="android/external/wycheproof" />
+  <project groups="pdk" name="platform/external/x264" path="android/external/x264" />
+  <project groups="pdk" name="platform/external/xmlrpcpp" path="android/external/xmlrpcpp" />
+  <project groups="pdk" name="platform/external/xmlwriter" path="android/external/xmlwriter" />
+  <project groups="pdk" name="platform/external/xmp_toolkit" path="android/external/xmp_toolkit" />
+  <project groups="pdk" name="platform/external/zlib" path="android/external/zlib" />
+  <project groups="pdk" name="platform/external/zopfli" path="android/external/zopfli" />
+  <project groups="pdk" name="platform/external/zxing" path="android/external/zxing" />
+  <project groups="pdk" name="platform/frameworks/av" path="android/frameworks/av" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/base" path="android/frameworks/base" />
+  <project groups="pdk" name="platform/frameworks/compile/libbcc" path="android/frameworks/compile/libbcc" />
+  <project groups="pdk" name="platform/frameworks/compile/mclinker" path="android/frameworks/compile/mclinker" />
+  <project groups="pdk" name="platform/frameworks/compile/slang" path="android/frameworks/compile/slang" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/ex" path="android/frameworks/ex" />
+  <project groups="pdk" name="platform/frameworks/hardware/interfaces" path="android/frameworks/hardware/interfaces" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/minikin" path="android/frameworks/minikin" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/ml" path="android/frameworks/ml" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/multidex" path="android/frameworks/multidex" />
+  <project groups="pdk" name="platform/frameworks/native" path="android/frameworks/native" />
+  <project groups="pdk-fs" name="platform/frameworks/opt/bitmap" path="android/frameworks/opt/bitmap" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/bluetooth" path="android/frameworks/opt/bluetooth" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/calendar" path="android/frameworks/opt/calendar" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/chips" path="android/frameworks/opt/chips" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/colorpicker" path="android/frameworks/opt/colorpicker" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/datetimepicker" path="android/frameworks/opt/datetimepicker" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/emoji" path="android/frameworks/opt/emoji" />
+  <project groups="pdk-fs" name="platform/frameworks/opt/inputconnectioncommon" path="android/frameworks/opt/inputconnectioncommon" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/inputmethodcommon" path="android/frameworks/opt/inputmethodcommon" />
+  <project groups="pdk-fs" name="platform/frameworks/opt/net/ethernet" path="android/frameworks/opt/net/ethernet" />
+  <project groups="frameworks_ims,pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/net/ims" path="android/frameworks/opt/net/ims" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/net/voip" path="android/frameworks/opt/net/voip" />
+  <project groups="pdk" name="platform/frameworks/opt/net/wifi" path="android/frameworks/opt/net/wifi" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/photoviewer" path="android/frameworks/opt/photoviewer" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/setupwizard" path="android/frameworks/opt/setupwizard" />
+  <project groups="pdk" name="platform/frameworks/opt/telephony" path="android/frameworks/opt/telephony" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/timezonepicker" path="android/frameworks/opt/timezonepicker" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/vcard" path="android/frameworks/opt/vcard" />
+  <project groups="pdk" name="platform/frameworks/rs" path="android/frameworks/rs" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/support" path="android/frameworks/support" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/data-binding" path="android/frameworks/data-binding" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/webview" path="android/frameworks/webview" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/wilhelm" path="android/frameworks/wilhelm" />
+  <project groups="pdk" name="platform/hardware/akm" path="android/hardware/akm" />
+  <project groups="pdk" name="platform/hardware/broadcom/libbt" path="android/hardware/broadcom/libbt" />
+  <project groups="pdk,broadcom_wlan" name="platform/hardware/broadcom/wlan" path="android/hardware/broadcom/wlan" />
+  <project groups="pdk" name="platform/hardware/google/apf" path="android/hardware/google/apf" />
+  <project groups="intel,pdk" name="platform/hardware/intel/audio_media" path="android/hardware/intel/audio_media" />
+  <project groups="intel,pdk" name="platform/hardware/intel/bootstub" path="android/hardware/intel/bootstub" />
+  <project groups="intel,pdk" name="platform/hardware/intel/common/bd_prov" path="android/hardware/intel/common/bd_prov" />
+  <project groups="intel,pdk" name="platform/hardware/intel/common/libmix" path="android/hardware/intel/common/libmix" />
+  <project groups="intel,pdk" name="platform/hardware/intel/common/libstagefrighthw" path="android/hardware/intel/common/libstagefrighthw" />
+  <project groups="intel,pdk" name="platform/hardware/intel/common/libva" path="android/hardware/intel/common/libva" />
+  <project groups="intel,pdk" name="platform/hardware/intel/common/libwsbm" path="android/hardware/intel/common/libwsbm" />
+  <project groups="intel,pdk" name="platform/hardware/intel/common/omx-components" path="android/hardware/intel/common/omx-components" />
+  <project groups="intel,pdk" name="platform/hardware/intel/common/utils" path="android/hardware/intel/common/utils" />
+  <project groups="intel,pdk" name="platform/hardware/intel/common/wrs_omxil_core" path="android/hardware/intel/common/wrs_omxil_core" />
+  <project groups="intel,pdk" name="platform/hardware/intel/img/hwcomposer" path="android/hardware/intel/img/hwcomposer" />
+  <project groups="intel,pdk" name="platform/hardware/intel/img/psb_headers" path="android/hardware/intel/img/psb_headers" />
+  <project groups="intel,pdk" name="platform/hardware/intel/img/psb_video" path="android/hardware/intel/img/psb_video" />
+  <project groups="intel_sensors,pdk" name="platform/hardware/intel/sensors" path="android/hardware/intel/sensors" />
+  <project groups="pdk" name="platform/hardware/interfaces" path="android/hardware/interfaces" />
+  <project groups="invensense,pdk" name="platform/hardware/invensense" path="android/hardware/invensense" />
+  <project groups="pdk" name="platform/hardware/libhardware" path="android/hardware/libhardware" />
+  <project groups="pdk" name="platform/hardware/libhardware_legacy" path="android/hardware/libhardware_legacy" />
+  <project groups="marvell_bt,pdk" name="platform/hardware/marvell/bt" path="android/hardware/marvell/bt" />
+  <project groups="qcom,qcom_audio,pdk" name="platform/hardware/qcom/audio" path="android/hardware/qcom/audio" />
+  <project groups="pdk" name="platform/hardware/qcom/bootctrl" path="android/hardware/qcom/bootctrl" />
+  <project groups="qcom,pdk" name="platform/hardware/qcom/bt" path="android/hardware/qcom/bt" />
+  <project groups="qcom,pdk" name="platform/hardware/qcom/data/ipacfg-mgr" path="android/hardware/qcom/data/ipacfg-mgr" />
+  <project groups="pdk,qcom,qcom_display" name="platform/hardware/qcom/display" path="android/hardware/qcom/display" />
+  <project groups="qcom,qcom_gps,pdk" name="platform/hardware/qcom/gps" path="android/hardware/qcom/gps" />
+  <project groups="qcom,qcom_keymaster,pdk" name="platform/hardware/qcom/keymaster" path="android/hardware/qcom/keymaster" />
+  <project groups="qcom,pdk" name="platform/hardware/qcom/media" path="android/hardware/qcom/media" />
+  <project groups="qcom_msm8960,pdk" name="platform/hardware/qcom/msm8960" path="android/hardware/qcom/msm8960" />
+  <project groups="qcom_msm8994,pdk" name="platform/hardware/qcom/msm8994" path="android/hardware/qcom/msm8994" />
+  <project groups="qcom_msm8996" name="platform/hardware/qcom/msm8996" path="android/hardware/qcom/msm8996" />
+  <project groups="qcom_msm8x26,pdk" name="platform/hardware/qcom/msm8x26" path="android/hardware/qcom/msm8x26" />
+  <project groups="qcom_msm8x27,pdk" name="platform/hardware/qcom/msm8x27" path="android/hardware/qcom/msm8x27" />
+  <project groups="qcom_msm8x84,pdk" name="platform/hardware/qcom/msm8x84" path="android/hardware/qcom/msm8x84" />
+  <project groups="qcom_msm8x09" name="platform/hardware/qcom/msm8x09" path="android/hardware/qcom/msm8x09" />
+  <project groups="qcom,pdk" name="platform/hardware/qcom/power" path="android/hardware/qcom/power" />
+  <project groups="qcom_wlan,pdk" name="platform/hardware/qcom/wlan" path="android/hardware/qcom/wlan" />
+  <project groups="pdk" name="platform/hardware/ril" path="android/hardware/ril" />
+  <project name="kernel/tests" path="android/kernel/tests" />
+  <project groups="pdk" name="platform/libcore" path="android/libcore" />
+  <project groups="pdk" name="platform/libnativehelper" path="android/libnativehelper" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/apps/BasicSmsReceiver" path="android/packages/apps/BasicSmsReceiver" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/apps/Bluetooth" path="android/packages/apps/Bluetooth" />
+  <project groups="pdk-fs" name="platform/packages/apps/Browser2" path="android/packages/apps/Browser2" />
+  <project groups="pdk-fs" name="platform/packages/apps/Calendar" path="android/packages/apps/Calendar" />
+  <project groups="pdk-fs" name="platform/packages/apps/Camera2" path="android/packages/apps/Camera2" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/apps/CarrierConfig" path="android/packages/apps/CarrierConfig" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/apps/CellBroadcastReceiver" path="android/packages/apps/CellBroadcastReceiver" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/apps/CertInstaller" path="android/packages/apps/CertInstaller" />
+  <project groups="pdk-fs" name="platform/packages/apps/Contacts" path="android/packages/apps/Contacts" />
+  <project groups="pdk-fs" name="platform/packages/apps/DeskClock" path="android/packages/apps/DeskClock" />
+  <project groups="pdk" name="platform/packages/apps/DevCamera" path="android/packages/apps/DevCamera" />
+  <project groups="pdk-fs" name="platform/packages/apps/Dialer" path="android/packages/apps/Dialer" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/apps/DocumentsUI" path="android/packages/apps/DocumentsUI" />
+  <project groups="pdk-fs" name="platform/packages/apps/Email" path="android/packages/apps/Email" />
+  <project groups="pdk-fs" name="platform/packages/apps/EmergencyInfo" path="android/packages/apps/EmergencyInfo" />
+  <project groups="pdk-fs" name="platform/packages/apps/ExactCalculator" path="android/packages/apps/ExactCalculator" />
+  <project groups="pdk-fs" name="platform/packages/apps/Gallery" path="android/packages/apps/Gallery" />
+  <project groups="pdk-fs" name="platform/packages/apps/Gallery2" path="android/packages/apps/Gallery2" />
+  <project groups="pdk-fs" name="platform/packages/apps/HTMLViewer" path="android/packages/apps/HTMLViewer" />
+  <project groups="pdk-fs" name="platform/packages/apps/KeyChain" path="android/packages/apps/KeyChain" />
+  <project groups="pdk-fs" name="platform/packages/apps/Launcher2" path="android/packages/apps/Launcher2" />
+  <project groups="pdk-fs" name="platform/packages/apps/Launcher3" path="android/packages/apps/Launcher3" />
+  <project groups="pdk-fs" name="platform/packages/apps/LegacyCamera" path="android/packages/apps/LegacyCamera" />
+  <project groups="pdk-fs" name="platform/packages/apps/ManagedProvisioning" path="android/packages/apps/ManagedProvisioning" />
+  <project groups="pdk-fs" name="platform/packages/apps/Messaging" path="android/packages/apps/Messaging" />
+  <project groups="pdk-fs" name="platform/packages/apps/Music" path="android/packages/apps/Music" />
+  <project groups="pdk-fs" name="platform/packages/apps/MusicFX" path="android/packages/apps/MusicFX" />
+  <project groups="apps_nfc,pdk-fs" name="platform/packages/apps/Nfc" path="android/packages/apps/Nfc" />
+  <project groups="pdk-fs" name="platform/packages/apps/OneTimeInitializer" path="android/packages/apps/OneTimeInitializer" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/apps/PackageInstaller" path="android/packages/apps/PackageInstaller" />
+  <project groups="pdk-fs" name="platform/packages/apps/Phone" path="android/packages/apps/Phone" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/apps/PhoneCommon" path="android/packages/apps/PhoneCommon" />
+  <project groups="pdk-fs" name="platform/packages/apps/Protips" path="android/packages/apps/Protips" />
+  <project groups="pdk-fs" name="platform/packages/apps/Provision" path="android/packages/apps/Provision" />
+  <project groups="pdk-fs" name="platform/packages/apps/QuickSearchBox" path="android/packages/apps/QuickSearchBox" />
+  <project groups="pdk-fs" name="platform/packages/apps/RetailDemo" path="android/packages/apps/RetailDemo" />
+  <project groups="pdk-fs" name="platform/packages/apps/SafetyRegulatoryInfo" path="android/packages/apps/SafetyRegulatoryInfo" />
+  <project groups="pdk-fs" name="platform/packages/apps/Settings" path="android/packages/apps/Settings" />
+  <project groups="pdk-fs" name="platform/packages/apps/SoundRecorder" path="android/packages/apps/SoundRecorder" />
+  <project groups="pdk-fs" name="platform/packages/apps/SpareParts" path="android/packages/apps/SpareParts" />
+  <project groups="pdk-fs" name="platform/packages/apps/SpeechRecorder" path="android/packages/apps/SpeechRecorder" />
+  <project groups="apps_stk,pdk-fs" name="platform/packages/apps/Stk" path="android/packages/apps/Stk" />
+  <project groups="pdk-fs" name="platform/packages/apps/StorageManager" path="android/packages/apps/StorageManager" />
+  <project groups="pdk-fs" name="platform/packages/apps/Tag" path="android/packages/apps/Tag" />
+  <project groups="pdk-fs" name="platform/packages/apps/Terminal" path="android/packages/apps/Terminal" />
+  <project groups="pdk" name="platform/packages/apps/Test/connectivity" path="android/packages/apps/Test/connectivity" />
+  <project groups="pdk-fs" name="platform/packages/apps/TvSettings" path="android/packages/apps/TvSettings" />
+  <project name="platform/packages/apps/TV" path="android/packages/apps/TV" />
+  <project groups="pdk-fs" name="platform/packages/apps/UnifiedEmail" path="android/packages/apps/UnifiedEmail" />
+  <project groups="pdk-fs" name="platform/packages/apps/WallpaperPicker" path="android/packages/apps/WallpaperPicker" />
+  <project name="platform/packages/experimental" path="android/packages/experimental" />
+  <project groups="pdk-fs" name="platform/packages/inputmethods/LatinIME" path="android/packages/inputmethods/LatinIME" />
+  <project groups="pdk-fs" name="platform/packages/inputmethods/OpenWnn" path="android/packages/inputmethods/OpenWnn" />
+  <project groups="pdk-fs" name="platform/packages/providers/ApplicationsProvider" path="android/packages/providers/ApplicationsProvider" />
+  <project groups="pdk-fs" name="platform/packages/providers/BlockedNumberProvider" path="android/packages/providers/BlockedNumberProvider" />
+  <project groups="pdk-fs" name="platform/packages/providers/BookmarkProvider" path="android/packages/providers/BookmarkProvider" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/providers/CalendarProvider" path="android/packages/providers/CalendarProvider" />
+  <project groups="pdk-fs" name="platform/packages/providers/CallLogProvider" path="android/packages/providers/CallLogProvider" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/providers/ContactsProvider" path="android/packages/providers/ContactsProvider" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/providers/DownloadProvider" path="android/packages/providers/DownloadProvider" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/providers/MediaProvider" path="android/packages/providers/MediaProvider" />
+  <project groups="pdk-fs" name="platform/packages/providers/PartnerBookmarksProvider" path="android/packages/providers/PartnerBookmarksProvider" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/providers/TelephonyProvider" path="android/packages/providers/TelephonyProvider" />
+  <project groups="pdk-fs" name="platform/packages/providers/TvProvider" path="android/packages/providers/TvProvider" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/providers/UserDictionaryProvider" path="android/packages/providers/UserDictionaryProvider" />
+  <project groups="pdk-fs" name="platform/packages/screensavers/Basic" path="android/packages/screensavers/Basic" />
+  <project groups="pdk-fs" name="platform/packages/screensavers/PhotoTable" path="android/packages/screensavers/PhotoTable" />
+  <project groups="pdk-fs" name="platform/packages/screensavers/WebView" path="android/packages/screensavers/WebView" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/Dialer" path="android/packages/apps/Car/Dialer" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/Hvac" path="android/packages/apps/Car/Hvac" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/LatinIME" path="android/packages/apps/Car/LatinIME" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/LensPicker" path="android/packages/apps/Car/LensPicker" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/LocalMediaPlayer" path="android/packages/apps/Car/LocalMediaPlayer" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/Media" path="android/packages/apps/Car/Media" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/Messenger" path="android/packages/apps/Car/Messenger" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/Overview" path="android/packages/apps/Car/Overview" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/Radio" path="android/packages/apps/Car/Radio" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/Settings" path="android/packages/apps/Car/Settings" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/Stream" path="android/packages/apps/Car/Stream" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/SystemUpdater" path="android/packages/apps/Car/SystemUpdater" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/UserManagement" path="android/packages/apps/Car/UserManagement" />
+  <project groups="pdk-fs" name="platform/packages/apps/Car/libs" path="android/packages/apps/Car/libs" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/services/BuiltInPrintService" path="android/packages/services/BuiltInPrintService" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/services/Car" path="android/packages/services/Car" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/services/Mms" path="android/packages/services/Mms" />
+  <project groups="pdk-fs" name="platform/packages/services/NetworkRecommendation" path="android/packages/services/NetworkRecommendation" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/services/Telecomm" path="android/packages/services/Telecomm" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/services/Telephony" path="android/packages/services/Telephony" />
+  <project groups="pdk-fs" name="platform/packages/wallpapers/LivePicker" path="android/packages/wallpapers/LivePicker" />
+  <project groups="pdk" name="platform/pdk" path="android/pdk" />
+  <project groups="pdk-fs,pdk-cw-fs,cts" name="platform/platform_testing" path="android/platform_testing" />
+  <project clone-depth="1" name="platform/prebuilts/abi-dumps/ndk" path="android/prebuilts/abi-dumps/ndk" />
+  <project clone-depth="1" name="platform/prebuilts/abi-dumps/vndk" path="android/prebuilts/abi-dumps/vndk" />
+  <project clone-depth="1" groups="pdk-fs" name="platform/prebuilts/android-emulator" path="android/prebuilts/android-emulator" />
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/build-tools" path="android/prebuilts/build-tools" />
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/checkcolor" path="android/prebuilts/checkcolor" />
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/checkstyle" path="android/prebuilts/checkstyle" />
+  <project clone-depth="1" groups="pdk,darwin" name="platform/prebuilts/clang/host/darwin-x86" path="android/prebuilts/clang/host/darwin-x86" />
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/clang/host/linux-x86" path="android/prebuilts/clang/host/linux-x86" />
+  <project clone-depth="1" groups="pdk-fs" name="platform/prebuilts/devtools" path="android/prebuilts/devtools" />
+  <project groups="pdk-fs" name="platform/prebuilts/deqp" path="android/prebuilts/deqp" />
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/eclipse" path="android/prebuilts/eclipse" />
+  <project clone-depth="1" groups="notdefault,eclipse" name="platform/prebuilts/eclipse-build-deps" path="android/prebuilts/eclipse-build-deps" />
+  <project clone-depth="1" groups="pdk,darwin,arm" name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" path="android/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" />
+  <project clone-depth="1" groups="pdk,darwin,arm" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" path="android/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" />
+  <project clone-depth="1" groups="pdk,darwin,arm" name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" path="android/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
+  <project clone-depth="1" groups="pdk,darwin" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" path="android/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" />
+  <project clone-depth="1" groups="pdk,darwin,mips" name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" path="android/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" />
+  <project clone-depth="1" groups="pdk,darwin,x86" name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" path="android/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" />
+  <project clone-depth="1" groups="pdk,linux,arm" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" path="android/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" />
+  <project clone-depth="1" groups="pdk,linux,arm" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" path="android/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" />
+  <project clone-depth="1" groups="pdk,linux,arm" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" path="android/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" />
+  <project clone-depth="1" groups="pdk,linux" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" path="android/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" />
+  <project clone-depth="1" groups="pdk,linux" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" path="android/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" />
+  <project clone-depth="1" groups="pdk-fs" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" path="android/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" />
+  <project clone-depth="1" groups="pdk,linux,mips" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" path="android/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" />
+  <project clone-depth="1" groups="pdk,linux,x86" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" path="android/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" />
+  <project clone-depth="1" groups="darwin" name="platform/prebuilts/gdb/darwin-x86" path="android/prebuilts/gdb/darwin-x86" />
+  <project clone-depth="1" groups="linux" name="platform/prebuilts/gdb/linux-x86" path="android/prebuilts/gdb/linux-x86" />
+  <project clone-depth="1" groups="darwin,pdk,tradefed" name="platform/prebuilts/go/darwin-x86" path="android/prebuilts/go/darwin-x86" />
+  <project clone-depth="1" groups="linux,pdk,tradefed" name="platform/prebuilts/go/linux-x86" path="android/prebuilts/go/linux-x86" />
+  <project clone-depth="1" groups="pdk-cw-fs,pdk-fs" name="platform/prebuilts/gradle-plugin" path="android/prebuilts/gradle-plugin" />
+  <project clone-depth="1" groups="pdk-cw-fs,pdk-fs" name="platform/prebuilts/libs/libedit" path="android/prebuilts/libs/libedit" />
+  <project clone-depth="1" groups="pdk-cw-fs,pdk-fs" name="platform/prebuilts/maven_repo/android" path="android/prebuilts/maven_repo/android" />
+  <project clone-depth="1" groups="pdk-cw-fs,pdk-fs" name="platform/prebuilts/maven_repo/bumptech" path="android/prebuilts/maven_repo/bumptech" />
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/misc" path="android/prebuilts/misc" />
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/ndk" path="android/prebuilts/ndk" />
+  <project clone-depth="1" groups="darwin,pdk,pdk-cw-fs,pdk-fs" name="platform/prebuilts/python/darwin-x86/2.7.5" path="android/prebuilts/python/darwin-x86/2.7.5" />
+  <project clone-depth="1" groups="linux,pdk,pdk-cw-fs,pdk-fs" name="platform/prebuilts/python/linux-x86/2.7.5" path="android/prebuilts/python/linux-x86/2.7.5" />
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/qemu-kernel" path="android/prebuilts/qemu-kernel" />
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/sdk" path="android/prebuilts/sdk" />
+  <project clone-depth="1" groups="pdk,tools" name="platform/prebuilts/tools" path="android/prebuilts/tools" />
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/sdk" path="android/sdk" />
+  <project groups="pdk" name="platform/system/bt" path="android/system/bt" />
+  <project groups="pdk" name="platform/system/ca-certificates" path="android/system/ca-certificates" />
+  <project groups="pdk" name="platform/system/connectivity/wificond" path="android/system/connectivity/wificond" />
+  <project groups="pdk" name="platform/system/connectivity/wifilogd" path="android/system/connectivity/wifilogd" />
+  <project groups="pdk" name="platform/system/chre" path="android/system/chre" />
+  <project groups="pdk" name="platform/system/core" path="android/system/core" />
+  <project groups="pdk" name="platform/system/extras" path="android/system/extras" />
+  <project groups="pdk" name="platform/system/gatekeeper" path="android/system/gatekeeper" />
+  <project groups="pdk" name="platform/system/hardware/interfaces" path="android/system/hardware/interfaces" />
+  <project groups="pdk" name="platform/system/hwservicemanager" path="android/system/hwservicemanager" />
+  <project groups="pdk" name="platform/system/keymaster" path="android/system/keymaster" />
+  <project groups="pdk" name="platform/system/libfmq" path="android/system/libfmq" />
+  <project groups="pdk" name="platform/system/libhidl" path="android/system/libhidl" />
+  <project groups="pdk" name="platform/system/libhwbinder" path="android/system/libhwbinder" />
+  <project groups="pdk" name="platform/system/libufdt" path="android/system/libufdt" />
+  <project groups="pdk" name="platform/system/libvintf" path="android/system/libvintf" />
+  <project groups="pdk" name="platform/system/media" path="android/system/media" />
+  <project groups="pdk" name="platform/system/netd" path="android/system/netd" />
+  <project groups="pdk" name="platform/system/nfc" path="android/system/nfc" />
+  <project name="platform/system/nvram" path="android/system/nvram" />
+  <project groups="pdk" name="platform/system/security" path="android/system/security" />
+  <project groups="pdk" name="platform/system/sepolicy" path="android/system/sepolicy" />
+  <project groups="pdk" name="platform/system/tools/aidl" path="android/system/tools/aidl" />
+  <project groups="pdk" name="platform/system/tools/hidl" path="android/system/tools/hidl" />
+  <project name="platform/system/tpm" path="android/system/tpm" />
+  <project groups="pdk" name="platform/system/update_engine" path="android/system/update_engine" />
+  <project groups="pdk" name="platform/system/vold" path="android/system/vold" />
+  <project groups="vts,pdk" name="platform/test/vts" path="android/test/vts" />
+  <project groups="vts,pdk" name="platform/test/vts-testcase/fuzz" path="android/test/vts-testcase/fuzz" />
+  <project groups="vts,pdk" name="platform/test/vts-testcase/hal" path="android/test/vts-testcase/hal" />
+  <project groups="vts,pdk" name="platform/test/vts-testcase/hal-trace" path="android/test/vts-testcase/hal-trace" />
+  <project groups="vts,pdk" name="platform/test/vts-testcase/kernel" path="android/test/vts-testcase/kernel" />
+  <project groups="vts,pdk" name="platform/test/vts-testcase/performance" path="android/test/vts-testcase/performance" />
+  <project groups="vts" name="platform/test/vts-testcase/security" path="android/test/vts-testcase/security" />
+  <project groups="vts,pdk" name="platform/test/vts-testcase/vndk" path="android/test/vts-testcase/vndk" />
+  <project groups="pdk" name="toolchain/binutils" path="android/toolchain/binutils" />
+  <project groups="notdefault,tools" name="platform/tools/adt/idea" path="android/tools/adt/idea" />
+  <project groups="pdk,tradefed" name="platform/tools/apksig" path="android/tools/apksig" />
+  <project groups="notdefault,tools" name="platform/tools/base" path="android/tools/base" />
+  <project groups="notdefault,tools" name="platform/tools/build" path="android/tools/build" />
+  <project groups="tools" name="platform/tools/external/fat32lib" path="android/tools/external/fat32lib" />
+  <project clone-depth="1" groups="tools" name="platform/tools/external/gradle" path="android/tools/external/gradle" />
+  <project groups="notdefault,tools" name="platform/tools/idea" path="android/tools/idea" />
+  <project groups="nopresubmit,pdk,tradefed" name="platform/tools/loganalysis" path="android/tools/loganalysis" />
+  <project groups="notdefault,motodev" name="platform/tools/motodev" path="android/tools/motodev" />
+  <project groups="adt-infra,cts,eclipse,motodev,pdk,tools,tradefed" name="platform/tools/repohooks" path="android/tools/repohooks" />
+  <project groups="notdefault,tools" name="platform/tools/studio/cloud" path="android/tools/studio/cloud" />
+  <project groups="notdefault,tools" name="platform/tools/swt" path="android/tools/swt" />
+  <project groups="pdk" name="platform/tools/test/connectivity" path="android/tools/test/connectivity" />
+  <project groups="pdk,tradefed" name="platform/tools/tradefederation" path="android/tools/tradefederation/core" />
+  <project groups="pdk,tradefed" name="platform/tools/tradefederation/contrib" path="android/tools/tradefederation/contrib" />
+
+  <repo-hooks enabled-list="pre-upload" in-project="platform/tools/repohooks" />
+
+   <!-- device profile for sgm775 -->
+  <project path="android/device/arm/css" name="landing-teams/working/arm/device-profile" remote="linaro" revision="sgm775" />
+   <!-- Gralloc -->
+   <project path="android/hardware/arm/gralloc" name="landing-teams/working/arm/gralloc" remote="linaro" revision="sgm775" />
+
+</manifest>
