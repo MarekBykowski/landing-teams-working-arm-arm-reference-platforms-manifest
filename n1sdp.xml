@@ -6,7 +6,7 @@
   <remote fetch="https://git.savannah.gnu.org" name="gnugit"/>
 
 
-  <project path="scp" name="ARM-software/SCP-firmware" remote="github" revision="f4c40709d4fedebd71ef2f90e8de566bd71d905b" upstream="master"/>
+  <project path="scp" name="ARM-software/SCP-firmware" remote="github" revision="4406f48c276b3613da2ca19426310de8762ccfab" upstream="master"/>
   <project path="scp/cmsis" name="ARM-software/CMSIS_5.git" remote="github" revision="refs/tags/5.2.0" upstream="master"/>
   <project path="arm-tf" name="TF-A/trusted-firmware-a.git" remote="TForg" revision="8b6394c95d820bd40e7b49fa1d3ea11c36f9e8d7" upstream="master"/>
   <project path="uefi/edk2" name="landing-teams/working/arm/edk2" remote="linaro" revision="1570fff5c0cdb72ca3c75755752fee1ac250c8fe" upstream="n1sdp" sync-s="true"/>
@@ -18,6 +18,6 @@
   <project name="landing-teams/working/arm/ramdisk" path="ramdisk" remote="linaro" revision="b57c098ca0561ff39aa70b3fe2c795b7a0108717" upstream="master"/>
   <project name="landing-teams/working/arm/uefi-tools.git" path="tools/uefi-tools" remote="linaro" revision="2c9cffcff80e6318c312771ae5bffd48bc23b6dc" upstream="n1sdp"/>
   <project name="landing-teams/working/arm/n1sdp-pcie-quirk.git" path="n1sdp-pcie-quirk" remote="linaro" revision="4ba287842508ce5e35b9b1a012065f2ac54a2ddd" upstream="master"/>
-  <project name="landing-teams/working/arm/n1sdp-board-firmware.git" path="board_firmware" remote="linaro" revision="b0ac1399d46b26ce3aeff20dd696899fda5f60f5" upstream="master"/>
+  <project name="landing-teams/working/arm/n1sdp-board-firmware.git" path="board_firmware" remote="linaro" revision="37e9169ae0366e55182efc5fbd820175be805a2f" upstream="master"/>
 
 </manifest>
