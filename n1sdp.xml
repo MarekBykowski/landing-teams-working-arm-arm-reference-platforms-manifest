@@ -9,8 +9,8 @@
   <project path="scp" name="ARM-software/SCP-firmware" remote="github" revision="541dcdaa7bc8ab899f7836dbc1138233a437f8b4" upstream="master"/>
   <project path="scp/cmsis" name="ARM-software/CMSIS_5.git" remote="github" revision="refs/tags/5.2.0" upstream="master"/>
   <project path="arm-tf" name="TF-A/trusted-firmware-a.git" remote="TForg" revision="8b6394c95d820bd40e7b49fa1d3ea11c36f9e8d7" upstream="master"/>
-  <project path="uefi/edk2" name="landing-teams/working/arm/edk2" remote="linaro" revision="1570fff5c0cdb72ca3c75755752fee1ac250c8fe" upstream="n1sdp" sync-s="true"/>
-  <project path="uefi/edk2/edk2-platforms" name="landing-teams/working/arm/edk2-platforms" remote="linaro" revision="e690156ec310e1abf4fc150024692cbe126f12aa" upstream="n1sdp"/>
+  <project path="uefi/edk2" name="landing-teams/working/arm/edk2" remote="linaro" revision="fa43ca9c2a5b99020fbf605f85acc692a807827c" upstream="n1sdp" sync-s="true"/>
+  <project path="uefi/edk2/edk2-platforms" name="landing-teams/working/arm/edk2-platforms" remote="linaro" revision="b1c2cdbe986bdb18339df84641be32e9eec7ec3e" upstream="n1sdp"/>
   <project path="grub" name="git/grub" remote="gnugit" revision="71f9e4ac44142af52c3fc1860436cf9e432bf764" upstream="master"/>
   <project path="tools/acpica" name="acpica/acpica" remote="github" revision="d0126a368a1f712d1d4bf723cd9be663aba88e08" upstream="master"/>
   <project path="linux" name="landing-teams/working/arm/kernel-release" remote="linaro" revision="5691250385b540d405f386a0d318894e7b8c4ad0" upstream="n1sdp"/>
