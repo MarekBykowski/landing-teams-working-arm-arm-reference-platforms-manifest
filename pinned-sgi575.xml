@@ -8,22 +8,22 @@
   <remote fetch="https://git.kernel.org" name="kernel"/>
   <remote fetch="https://git.trustedfirmware.org" name="trustedfirmware"/>
 
-  <project remote="linaro" name="landing-teams/working/arm/scp-firmware" path="scp" revision="0125bd38919f6315ebf692ec437d38ab4607364a"/>
-  <project remote="linaro" name="landing-teams/working/arm/arm-tf" path="arm-tf" revision="fb21d05fb0d3d1d7530d5d9489edba371e53ec3f"/>
-  <project remote="linaro" name="landing-teams/working/arm/edk2" path="uefi/edk2" revision="e4a1bf48424923706928298463609edfa8dad971"/>
-  <project remote="linaro" name="landing-teams/working/arm/edk2-platforms" path="uefi/edk2/edk2-platforms" revision="88ef76d2051f8755a6d6f0d84adadd7c134008b3"/>
-  <project remote="linaro" name="landing-teams/working/arm/kernel-release" path="linux" revision="38321d3935f5d6df371477b9ad97b9d194ec2f7a"/>
-  <project remote="linaro" name="landing-teams/working/arm/build-scripts" path="build-scripts" revision="f19af94d844f79b1be8a200884f5f6899136fba3"/>
+  <project remote="linaro" name="landing-teams/working/arm/scp-firmware" path="scp" revision="5633a90deeca7f23bc6a45ba5990709acc8e595a"/>
+  <project remote="linaro" name="landing-teams/working/arm/arm-tf" path="arm-tf" revision="6eb3e14a7e53f21dd934f19537cdfa83f08aed29"/>
+  <project remote="linaro" name="landing-teams/working/arm/edk2" path="uefi/edk2" revision="ddda7804e10629f82b81758fa30f9ae37ffbeabe"/>
+  <project remote="linaro" name="landing-teams/working/arm/edk2-platforms" path="uefi/edk2/edk2-platforms" revision="fa28823810916e7229e526e74168d4364cb28196"/>
+  <project remote="linaro" name="landing-teams/working/arm/kernel-release" path="linux" revision="bbe496e059a22ffdd031ec7f78e59d83de681225"/>
+  <project remote="linaro" name="landing-teams/working/arm/build-scripts" path="build-scripts" revision="ea0f1ba5702096677d658788f39b066914e89562"/>
   <project remote="linaro" name="landing-teams/working/arm/model-scripts" path="model-scripts" revision="d0196d3df824ee243523c48cefa4583c1b907312"/>
   <project remote="linaro" name="landing-teams/working/arm/uefi-tools" path="tools/uefi-tools" revision="d607c4ac9dc5db521cfed62dc8b1a08c45c83fc6"/>
-  <project remote="trustedfirmware" name="TF-A/tf-a-tests" path="validation/comp-test/trusted-firmware-tf" revision="39b397af7566135498e6995102698c0efb0dc90c"/>
+  <project remote="trustedfirmware" name="TF-A/tf-a-tests" path="validation/comp-test/trusted-firmware-tf" revision="1ca3102141319bd514c296ddc256f92e321780a2"/>
 
-  <project remote="github" name="acpica/acpica" path="tools/acpica" revision="refs/tags/R05_31_17"/>
-  <project remote="github" name="ARMmbed/mbedtls.git" path="mbedtls" revision="refs/tags/mbedtls-2.2.1"/>
+  <project remote="github" name="acpica/acpica" path="tools/acpica" revision="refs/tags/R08_16_19"/>
+  <project remote="github" name="ARMmbed/mbedtls.git" path="mbedtls" revision="refs/tags/mbedtls-2.16.3"/>
   <project remote="github" name="ARM-software/CMSIS_5.git" path="scp/cmsis" revision="refs/tags/5.2.0"/>
   <project remote="github" name="ARM-software/arm-enterprise-acs" path="validation/sys-test/arm-enterprise-acs" revision="refs/tags/v18.12_REL1.7"/>
   <project remote="kernel" name="pub/scm/linux/kernel/git/jejb/efitools" path="tools/efitools" revision="refs/tags/v1.9.2"/>
-  <project remote="busybox" name="busybox" path="busybox" revision="b096ce0fdda0918f9248ff15838cbc31525fa823"/>
-  <project remote="gnugit" name="git/grub" path="grub" revision="41121742df1af73699965a2aab5fb1f5e6555ad5"/>
+  <project remote="busybox" name="busybox" path="busybox" revision="refs/tags/1_31_0"/>
+  <project remote="gnugit" name="git/grub" path="grub" revision="refs/tags/grub-2.04"/>
   <project remote="linaro" name="landing-teams/working/arm/ramdisk" path="ramdisk" revision="b57c098ca0561ff39aa70b3fe2c795b7a0108717"/>
 </manifest>
