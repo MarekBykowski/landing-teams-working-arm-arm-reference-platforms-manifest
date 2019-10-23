@@ -18,12 +18,12 @@
   <project remote="linaro" name="landing-teams/working/arm/uefi-tools" path="tools/uefi-tools" revision="refinfra" upstream="refinfra"/>
   <project remote="trustedfirmware" name="TF-A/tf-a-tests" path="validation/comp-test/trusted-firmware-tf" revision="master" upstream="master"/>
 
-  <project remote="github" name="acpica/acpica" path="tools/acpica" revision="refs/tags/R05_31_17"/>
-  <project remote="github" name="ARMmbed/mbedtls.git" path="mbedtls" revision="refs/tags/mbedtls-2.2.1"/>
+  <project remote="github" name="acpica/acpica" path="tools/acpica" revision="master" upstream="master"/>
+  <project remote="github" name="ARMmbed/mbedtls.git" path="mbedtls" revision="master" upstream="master"/>
   <project remote="github" name="ARM-software/CMSIS_5.git" path="scp/cmsis" revision="refs/tags/5.2.0"/>
   <project remote="github" name="ARM-software/arm-enterprise-acs" path="validation/sys-test/arm-enterprise-acs" revision="refs/tags/v18.12_REL1.7"/>
-  <project remote="kernel" name="pub/scm/linux/kernel/git/jejb/efitools" path="tools/efitools" revision="master" />
+  <project remote="kernel" name="pub/scm/linux/kernel/git/jejb/efitools" path="tools/efitools" revision="master" upstream="master"/>
   <project remote="busybox" name="busybox" path="busybox" revision="master" upstream="master"/>
-  <project remote="gnugit" name="git/grub" path="grub" revision="f8f35acb5b05d40e3707a9d2db9ede60023e4cac" upstream="master"/>
+  <project remote="gnugit" name="git/grub" path="grub" revision="master" upstream="master"/>
   <project remote="linaro" name="landing-teams/working/arm/ramdisk" path="ramdisk" revision="master" upstream="master"/>
 </manifest>
