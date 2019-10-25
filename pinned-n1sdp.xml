@@ -6,7 +6,7 @@
   <remote fetch="https://git.savannah.gnu.org" name="gnugit"/>
 
 
-  <project path="scp" name="ARM-software/SCP-firmware" remote="github" revision="691b6cff8ab9c4398802c4f1e3791f8b6b1621c8" upstream="master"/>
+  <project path="scp" name="ARM-software/SCP-firmware" remote="github" revision="efc0e68be2df614f12142c133606d5e92b86f0ab" upstream="master"/>
   <project path="scp/cmsis" name="ARM-software/CMSIS_5.git" remote="github" revision="refs/tags/5.2.0" upstream="master"/>
   <project path="arm-tf" name="TF-A/trusted-firmware-a.git" remote="TForg" revision="8b6394c95d820bd40e7b49fa1d3ea11c36f9e8d7" upstream="master"/>
   <project path="uefi/edk2" name="landing-teams/working/arm/edk2" remote="linaro" revision="a240d41d5c168f20f433858131c827f200e78006" upstream="n1sdp" sync-s="true"/>
