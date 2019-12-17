@@ -11,7 +11,7 @@
   <project remote="linaro" name="landing-teams/working/arm/edk2" path="uefi/edk2" revision="refs/tags/RD-INFRA-20191024-RC0"/>
   <project remote="linaro" name="landing-teams/working/arm/edk2-platforms" path="uefi/edk2/edk2-platforms" revision="refs/tags/RD-INFRA-20191024-RC0"/>
   <project remote="linaro" name="landing-teams/working/arm/kernel-release" path="linux" revision="refs/tags/RD-INFRA-20191024-RC0"/>
-  <project remote="linaro" name="landing-teams/working/arm/build-scripts" path="build-scripts" revision="refs/tags/RD-INFRA-20191024-RC0"/>
+  <project remote="linaro" name="landing-teams/working/arm/build-scripts" path="build-scripts" revision="refs/tags/RD-INFRA-2019.12.17"/>
   <project remote="linaro" name="landing-teams/working/arm/model-scripts" path="model-scripts" revision="refs/tags/RD-INFRA-2019.12.16"/>
   <project remote="linaro" name="landing-teams/working/arm/uefi-tools" path="tools/uefi-tools" revision="refs/tags/RD-INFRA-20191024-RC0"/>
 
