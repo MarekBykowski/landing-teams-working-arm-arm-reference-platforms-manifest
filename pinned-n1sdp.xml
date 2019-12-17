@@ -17,7 +17,7 @@
   <project name="landing-teams/working/arm/build-scripts" path="build-scripts" remote="linaro" revision="27106c075e4054c42a0de3d3efcf482c57a7c090" upstream="n1sdp"/>
   <project name="landing-teams/working/arm/ramdisk" path="ramdisk" remote="linaro" revision="b57c098ca0561ff39aa70b3fe2c795b7a0108717" upstream="master"/>
   <project name="landing-teams/working/arm/uefi-tools.git" path="tools/uefi-tools" remote="linaro" revision="2c9cffcff80e6318c312771ae5bffd48bc23b6dc" upstream="n1sdp"/>
-  <project name="landing-teams/working/arm/n1sdp-pcie-quirk.git" path="n1sdp-pcie-quirk" remote="linaro" revision="cb7b00f8fd576b175f4ae29d092368d950fc22d0" upstream="master"/>
+  <project name="landing-teams/working/arm/n1sdp-pcie-quirk.git" path="n1sdp-pcie-quirk" remote="linaro" revision="314b692f5ffdb1b881fe1095400059ee1b050ede" upstream="master"/>
   <project name="landing-teams/working/arm/n1sdp-board-firmware.git" path="board_firmware" remote="linaro" revision="a8a67c5f833d95f541e2a4656e37eaa8943a3386" upstream="master"/>
 
 </manifest>
