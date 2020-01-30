@@ -6,7 +6,7 @@
   <remote fetch="https://github.com/ARMmbed/" name="mbedtls"/>
   <remote fetch="https://github.com/OP-TEE/" name="optee"/>
 
-  <project name="ARM-software/arm-trusted-firmware" path="arm-tf" remote="github" revision="6a7cbfd56837409b85c26df0206177e59fc95a79" upstream="master"/>
+  <project name="ARM-software/arm-trusted-firmware" path="arm-tf" remote="github" revision="91ff490d75a89607a0b19577275e8134b8ffa74d" upstream="master"/>
   <project name="ARM-software/SCP-firmware" path="scp" remote="github" revision="8533a3eeb7e927d4e3819b0a372e3023dd786957" upstream="master"/>
   <project name="acpica/acpica" path="tools/acpica" remote="github" revision="d0126a368a1f712d1d4bf723cd9be663aba88e08" upstream="master"/>
   <project name="busybox" remote="busybox" revision="111cdcf295b4cab78521480f52b295d9ae719263" upstream="master"/>

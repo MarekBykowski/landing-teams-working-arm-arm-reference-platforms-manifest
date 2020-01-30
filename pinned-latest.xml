@@ -6,7 +6,7 @@
   <remote fetch="https://github.com/ARMmbed/" name="mbedtls"/>
   <remote fetch="https://github.com/OP-TEE/" name="optee"/>
 
-  <project name="ARM-software/arm-trusted-firmware" path="arm-tf" remote="github" revision="6a7cbfd56837409b85c26df0206177e59fc95a79" upstream="master"/>
+  <project name="ARM-software/arm-trusted-firmware" path="arm-tf" remote="github" revision="91ff490d75a89607a0b19577275e8134b8ffa74d" upstream="master"/>
   <project name="acpica/acpica" path="tools/acpica" remote="github" revision="d0126a368a1f712d1d4bf723cd9be663aba88e08" upstream="master"/>
   <project name="arm/vexpress-firmware" path="recovery" remote="linaro" revision="c563efd51d08a1bdaebdd100888a986c5bc7afe9" upstream="juno"/>
   <project name="arm/vexpress-firmware" path="vexpress-firmware" remote="linaro" revision="d9e8f81e7beeeeb0ffade64dc0b689e4fa11909e" upstream="vexpress"/>
