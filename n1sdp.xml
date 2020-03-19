@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="git://git.busybox.net/" name="busybox"/>
+  <remote fetch="https://github.com/mirror/" name="busybox"/>
   <remote name="github" fetch="https://github.com"/>
   <remote name="linaro" fetch="http://git.linaro.org"/>
   <remote name="TForg"  fetch="https://git.trustedfirmware.org"/>
@@ -9,7 +9,7 @@
 
   <project path="scp" name="ARM-software/SCP-firmware" remote="github" revision="a366c5c6da1a93a9f374784fb9a6af0edb4027fd" upstream="master"/>
   <project path="scp/cmsis" name="ARM-software/CMSIS_5.git" remote="github" revision="refs/tags/5.2.0" upstream="master"/>
-  <project path="arm-tf" name="TF-A/trusted-firmware-a.git" remote="TForg" revision="f9ea3a6291b45bddda0564e8ff654a615933b173" upstream="master"/>
+  <project path="arm-tf" name="TF-A/trusted-firmware-a.git" remote="TForg" revision="cfb3f73344217aa000aaff9d84baad7527af75bf" upstream="master"/>
   <project path="uefi/edk2" name="landing-teams/working/arm/edk2" remote="linaro" revision="3ff8a6bffabad761279817252014d59b6069d68a" upstream="n1sdp"/>
   <project path="uefi/edk2/edk2-platforms" name="landing-teams/working/arm/edk2-platforms" remote="linaro" revision="b6bfc4417ff13168d69c4cbf2338f62c89c82dfd" upstream="n1sdp"/>
   <project path="grub" name="git/grub" remote="gnugit" revision="71f9e4ac44142af52c3fc1860436cf9e432bf764" upstream="master"/>
@@ -18,8 +18,8 @@
   <project name="landing-teams/working/arm/build-scripts" path="build-scripts" remote="linaro" revision="b8d9154191f2e8560e380d0b0757a10e1c71d191" upstream="n1sdp"/>
   <project name="landing-teams/working/arm/ramdisk" path="ramdisk" remote="linaro" revision="b57c098ca0561ff39aa70b3fe2c795b7a0108717" upstream="master"/>
   <project name="landing-teams/working/arm/uefi-tools.git" path="tools/uefi-tools" remote="linaro" revision="2c9cffcff80e6318c312771ae5bffd48bc23b6dc" upstream="n1sdp"/>
-  <project name="landing-teams/working/arm/n1sdp-pcie-quirk.git" path="n1sdp-pcie-quirk" remote="linaro" revision="96915bc97d4415324fb7897f5e65523ce0f06b3d" upstream="master"/>
-  <project name="landing-teams/working/arm/n1sdp-board-firmware.git" path="board_firmware" remote="linaro" revision="a8a67c5f833d95f541e2a4656e37eaa8943a3386" upstream="master"/>
+  <project name="landing-teams/working/arm/n1sdp-pcie-quirk.git" path="n1sdp-pcie-quirk" remote="linaro" revision="98467a1bb201ef62ae13d708df8a0b9c1409b849" upstream="master"/>
+  <project name="landing-teams/working/arm/n1sdp-board-firmware.git" path="board_firmware" remote="linaro" revision="9c49125a89b881430e1e8e9762c3ec2ee3f6417e" upstream="master"/>
   <project name="landing-teams/working/arm/device-tree.git" path="device-trees" remote="linaro" revision="3209a868152f348194cc1f20fd87c759d3a97d45" upstream="n1sdp"/>
   <project remote="busybox" name="busybox" path="busybox" revision="refs/tags/1_31_0"/>
 </manifest>
