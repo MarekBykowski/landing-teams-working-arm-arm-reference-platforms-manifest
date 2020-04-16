@@ -1,24 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="git://git.busybox.net/" name="busybox"/>
   <remote fetch="https://github.com/" name="github"/>
   <remote fetch="https://git.linaro.org/" name="linaro"/>
-  <remote fetch="https://github.com/ARMmbed/" name="mbedtls"/>
   <remote fetch="https://git.savannah.gnu.org" name="gnugit"/>
 
-  <project remote="linaro" name="landing-teams/working/arm/scp-firmware" path="scp" revision="refs/tags/RD-DANIEL-CFGM-2019.12.13"/>
-  <project remote="linaro" name="landing-teams/working/arm/arm-tf" path="arm-tf" revision="refs/tags/RD-INFRA-20191024-RC0"/>
-  <project remote="linaro" name="landing-teams/working/arm/edk2" path="uefi/edk2" revision="refs/tags/RD-INFRA-20191024-RC0"/>
-  <project remote="linaro" name="landing-teams/working/arm/edk2-platforms" path="uefi/edk2/edk2-platforms" revision="refs/tags/RD-INFRA-20191024-RC0"/>
-  <project remote="linaro" name="landing-teams/working/arm/kernel-release" path="linux" revision="refs/tags/RD-INFRA-20191024-RC0"/>
-  <project remote="linaro" name="landing-teams/working/arm/build-scripts" path="build-scripts" revision="refs/tags/RD-INFRA-2019.12.17"/>
-  <project remote="linaro" name="landing-teams/working/arm/model-scripts" path="model-scripts" revision="refs/tags/RD-INFRA-2019.12.16"/>
-  <project remote="linaro" name="landing-teams/working/arm/uefi-tools" path="tools/uefi-tools" revision="refs/tags/RD-INFRA-20191024-RC0"/>
+  <project remote="linaro" name="landing-teams/working/arm/scp-firmware" path="scp" revision="refs/tags/RD-INFRA-2020.04.16"/>
+  <project remote="linaro" name="landing-teams/working/arm/arm-tf" path="arm-tf" revision="refs/tags/RD-INFRA-2020.04.16"/>
+  <project remote="linaro" name="landing-teams/working/arm/edk2" path="uefi/edk2" revision="refs/tags/RD-INFRA-2020.04.16"/>
+  <project remote="linaro" name="landing-teams/working/arm/edk2-platforms" path="uefi/edk2/edk2-platforms" revision="refs/tags/RD-INFRA-2020.04.16"/>
+  <project remote="linaro" name="landing-teams/working/arm/kernel-release" path="linux" revision="refs/tags/RD-INFRA-2020.04.16"/>
+  <project remote="linaro" name="landing-teams/working/arm/build-scripts" path="build-scripts" revision="refs/tags/RD-INFRA-2020.04.16"/>
+  <project remote="linaro" name="landing-teams/working/arm/model-scripts" path="model-scripts" revision="refs/tags/RD-INFRA-2020.04.16"/>
+  <project remote="linaro" name="landing-teams/working/arm/uefi-tools" path="tools/uefi-tools" revision="refs/tags/RD-INFRA-2020.04.16"/>
 
-  <project remote="github" name="acpica/acpica" path="tools/acpica" revision="refs/tags/R05_31_17"/>
-  <project remote="github" name="ARMmbed/mbedtls.git" path="mbedtls" revision="refs/tags/mbedtls-2.2.1"/>
-  <project remote="github" name="ARM-software/CMSIS_5.git" path="scp/cmsis" revision="refs/tags/5.2.0"/>
-  <project remote="busybox" name="busybox" path="busybox" revision="refs/tags/1_31_0"/>
+  <project remote="github" name="acpica/acpica" path="tools/acpica" revision="refs/tags/R03_26_20"/>
+  <project remote="github" name="ARMmbed/mbedtls.git" path="mbedtls" revision="refs/tags/mbedtls-2.21.0"/>
+  <project remote="github" name="mirror/busybox" path="busybox" revision="refs/tags/1_31_1"/>
   <project remote="gnugit" name="git/grub" path="grub" revision="refs/tags/grub-2.04"/>
   <project remote="linaro" name="landing-teams/working/arm/ramdisk" path="ramdisk" revision="refs/tags/armlt-20180812-001"/>
 </manifest>

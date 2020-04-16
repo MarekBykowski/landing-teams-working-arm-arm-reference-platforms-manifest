@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="https://github.com/mirror/" name="busybox"/>
   <remote fetch="https://github.com/" name="github"/>
   <remote fetch="https://git.linaro.org/" name="linaro"/>
-  <remote fetch="https://github.com/ARMmbed/" name="mbedtls"/>
   <remote fetch="https://git.savannah.gnu.org" name="gnugit"/>
-  <remote fetch="https://git.kernel.org" name="kernel"/>
 
   <project remote="linaro" name="landing-teams/working/arm/scp-firmware" path="scp" revision="refinfra" upstream="refinfra"/>
   <project remote="linaro" name="landing-teams/working/arm/arm-tf" path="arm-tf" revision="refinfra" upstream="refinfra"/>
@@ -18,7 +15,7 @@
 
   <project remote="github" name="acpica/acpica" path="tools/acpica" revision="refs/tags/R03_26_20"/>
   <project remote="github" name="ARMmbed/mbedtls.git" path="mbedtls" revision="refs/tags/mbedtls-2.21.0"/>
-  <project remote="busybox" name="busybox" path="busybox" revision="refs/tags/1_31_1"/>
+  <project remote="github" name="mirror/busybox" path="busybox" revision="refs/tags/1_31_1"/>
   <project remote="gnugit" name="git/grub" path="grub" revision="refs/tags/grub-2.04"/>
   <project remote="linaro" name="landing-teams/working/arm/ramdisk" path="ramdisk" revision="refs/tags/armlt-20180812-001"/>
 </manifest>
