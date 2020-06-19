@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="https://git.linaro.org" name="linaro"/>
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+
+  <default revision="master" sync-j="8"/>
+
+  <project name="landing-teams/working/arm/yocto-platform-config" path="conf" remote="linaro" revision="ci-rc1">
+    <linkfile dest="setup-environment" src="setup-environment"/>
+    <linkfile dest="setup-environment-internal" src="setup-environment-internal"/>
+  </project>
+  <project name="landing-teams/working/arm/yocto-recipes" path="layers/meta-arm" remote="linaro" revision="ci-rc1"/>
+  <project name="landing-teams/working/arm/meta-arm-image" path="layers/meta-arm-image" remote="linaro" revision="ci-rc1"/>
+  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="ci-rc1"/>
+
+  <project name="meta-yocto" path="layers/meta-yocto" remote="yocto" revision="3f6857be9be9ab5e2ede9a416c212487357eec0d" />
+  <project name="openembedded/bitbake" path="bitbake" remote="github"  revision="b94dec477a8d48ebceec91952ba290798c56c1f5"/>
+  <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro" revision="85200688fda62d6542d4524d402992d45e93b24e"/>
+  <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github" revision="920161113533074d27dc93c521815380fdf20275"/>
+  <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github" revision="1795f30d8ab73d35710ca99064c51190dc84853e"/>
+</manifest>
