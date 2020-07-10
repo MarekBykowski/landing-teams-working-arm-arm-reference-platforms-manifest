@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://git.openembedded.org/" name="openembedded"/>
+  <remote name="linaro" fetch="http://git.linaro.org"/>
+
+  <project name="landing-teams/working/arm/yocto-platform-config" path="conf" remote="linaro" revision="master">
+    <linkfile dest="setup-environment" src="setup-environment"/>
+  </project>
+  <project name="meta-yocto" path="layers/meta-yocto" remote="yocto" revision="2d2dc20359ca75203f2194415b53731ad8ff0066"/>
+  <project name="bitbake" path="bitbake" remote="openembedded"  revision="refs/tags/2019-10.2-zeus"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" remote="openembedded" revision="2b5dd1eb81cd08bc065bc76125f2856e9383e98b"/>
+  <project name="openembedded-core" path="layers/openembedded-core" remote="openembedded" revision="f5b90eeed7366432b39c7cd8c6ee8c23e2d4abe8"/>
+  <project name="meta-arm" path="layers/meta-arm" remote="yocto" revision="2b8cd1b1c92287890668f3d4b94d925ac216cab1"/>
+  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="4eaccd1070e118bd49376b07fd83acfddb6101d9"/>
+</manifest>
