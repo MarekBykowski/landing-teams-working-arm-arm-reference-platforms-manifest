@@ -11,7 +11,7 @@
     <linkfile dest="setup-environment" src="setup-environment"/>
     <linkfile dest="setup-environment-internal" src="setup-environment-internal"/>
   </project>
-  <project name="landing-teams/working/arm/yocto-recipes" path="layers/meta-arm" remote="linaro" revision="ci-rc1"/>
+  <project name="landing-teams/working/arm/yocto-recipes" path="layers/meta-arm" remote="linaro" revision="ci-rc2"/>
   <project name="landing-teams/working/arm/meta-arm-image" path="layers/meta-arm-image" remote="linaro" revision="ci-rc1"/>
   <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="ci-rc1"/>
 
