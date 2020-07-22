@@ -9,7 +9,7 @@
 
   <project path="scp" name="ARM-software/SCP-firmware" remote="github" revision="35f276d7eaf686d3ae9e995eff5a6957f0677b7f" upstream="master"/>
   <project path="scp/cmsis" name="ARM-software/CMSIS_5.git" remote="github" revision="refs/tags/5.2.0" upstream="master"/>
-  <project path="arm-tf" name="TF-A/trusted-firmware-a.git" remote="TForg" revision="cfb3f73344217aa000aaff9d84baad7527af75bf" upstream="master"/>
+  <project path="arm-tf" name="TF-A/trusted-firmware-a.git" remote="TForg" revision="8ff55a9e14a23d7c7f89f52465bcc6307850aa33" upstream="master"/>
   <project path="uefi/edk2" name="landing-teams/working/arm/edk2" remote="linaro" revision="3ff8a6bffabad761279817252014d59b6069d68a" upstream="n1sdp"/>
   <project path="uefi/edk2/edk2-platforms" name="landing-teams/working/arm/edk2-platforms" remote="linaro" revision="b6bfc4417ff13168d69c4cbf2338f62c89c82dfd" upstream="n1sdp"/>
   <project path="grub" name="git/grub" remote="gnugit" revision="71f9e4ac44142af52c3fc1860436cf9e432bf764" upstream="master"/>
