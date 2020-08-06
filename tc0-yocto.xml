@@ -4,14 +4,15 @@
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
   <remote fetch="https://git.openembedded.org/" name="openembedded"/>
   <remote name="linaro" fetch="http://git.linaro.org"/>
-
-  <project name="landing-teams/working/arm/yocto-platform-config" path="conf" remote="linaro" revision="refs/tags/TC0-2020.07.20">
+  <remote fetch="https://gitlab.com/" name="gitlab" />
+  <project name="landing-teams/working/arm/yocto-platform-config" path="conf" remote="linaro" revision="master">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
-  <project name="meta-yocto" path="layers/meta-yocto" remote="yocto" revision="2d2dc20359ca75203f2194415b53731ad8ff0066"/>
-  <project name="bitbake" path="bitbake" remote="openembedded"  revision="refs/tags/2019-10.2-zeus"/>
-  <project name="meta-openembedded" path="layers/meta-openembedded" remote="openembedded" revision="2b5dd1eb81cd08bc065bc76125f2856e9383e98b"/>
-  <project name="openembedded-core" path="layers/openembedded-core" remote="openembedded" revision="f5b90eeed7366432b39c7cd8c6ee8c23e2d4abe8"/>
-  <project name="meta-arm" path="layers/meta-arm" remote="yocto" revision="2b8cd1b1c92287890668f3d4b94d925ac216cab1"/>
-  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="refs/tags/TC0-2020.07.20"/>
+  <project name="meta-yocto" path="layers/meta-yocto" remote="yocto" revision="432b365f48f58ec0d9692a93607b65edd098ca1a"/>
+  <project name="bitbake" path="bitbake" remote="openembedded"  revision="4618da2094189e4d814b7d65672cb65c86c0626a"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" remote="openembedded" revision="cc6fc6b1641ab23089c1e3bba11e0c6394f0867c"/>
+  <project name="openembedded-core" path="layers/openembedded-core" remote="openembedded" revision="ea886d57db917a41a0d106a15e1e96c72d6407b0"/>
+  <project name="openembedded/community/meta-kernel" path="layers/meta-kernel" remote="gitlab" revision="f5b7faae5caf4ce8575a37c82e41a24706df00b4"/>
+  <project name="meta-arm" path="layers/meta-arm" remote="yocto" revision="d651ccd61c5ebd031f3f14cfa660959cfe457af8"/>
+  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="master"/>
 </manifest>
