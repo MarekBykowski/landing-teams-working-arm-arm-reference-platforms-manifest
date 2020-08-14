@@ -5,7 +5,7 @@
   <remote fetch="https://git.openembedded.org/" name="openembedded"/>
   <remote name="linaro" fetch="http://git.linaro.org"/>
   <remote fetch="https://gitlab.com/" name="gitlab" />
-  <project name="landing-teams/working/arm/yocto-platform-config" path="conf" remote="linaro" revision="master">
+  <project name="landing-teams/working/arm/yocto-platform-config" path="conf" remote="linaro" revision="refs/tags/TC0-2020.08.14">
     <linkfile dest="setup-environment" src="setup-environment"/>
   </project>
   <project name="meta-yocto" path="layers/meta-yocto" remote="yocto" revision="432b365f48f58ec0d9692a93607b65edd098ca1a"/>
@@ -14,5 +14,5 @@
   <project name="openembedded-core" path="layers/openembedded-core" remote="openembedded" revision="ea886d57db917a41a0d106a15e1e96c72d6407b0"/>
   <project name="openembedded/community/meta-kernel" path="layers/meta-kernel" remote="gitlab" revision="f5b7faae5caf4ce8575a37c82e41a24706df00b4"/>
   <project name="meta-arm" path="layers/meta-arm" remote="yocto" revision="d651ccd61c5ebd031f3f14cfa660959cfe457af8"/>
-  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="master"/>
+  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="refs/tags/TC0-2020.08.14"/>
 </manifest>
