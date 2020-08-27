@@ -2,20 +2,24 @@
 <manifest>
 
   <remote fetch="https://github.com" name="github"/>
+  <remote fetch="https://gitlab.com" name="gitlab"/>
   <remote fetch="https://git.linaro.org" name="linaro"/>
   <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
 
   <default revision="master" sync-j="8"/>
 
-  <project name="landing-teams/working/arm/yocto-config" path="conf" remote="linaro" revision="refs/tags/CORSTONE-700-2020.02.10">
+  <project name="landing-teams/working/arm/yocto-platform-config" path="conf" remote="linaro" revision="5545083cb3c5a08039a377da045e6168c75beae2">
     <linkfile dest="setup-environment" src="setup-environment"/>
     <linkfile dest="setup-environment-internal" src="setup-environment-internal"/>
   </project>
-  <project name="landing-teams/working/arm/yocto-recipes" path="layers/meta-arm" remote="linaro" revision="26a564ac17e350c24c2b9f85392ba3912518cd86"/>
-  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="refs/tags/CORSTONE-700-2020.02.10"/>
-  <project name="meta-yocto" path="layers/meta-yocto" remote="yocto" revision="48bf40749cc63e8e951c76abbe65b1b9620b2481"/>
-  <project name="openembedded/bitbake" path="bitbake" remote="github"  revision="f5ea06fc2b6713c9f8e85ecf7cb981ae9a84d896"/>
-  <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro" revision="344c79a4dadd109455b2e408e68a8cc7ee39155f"/>
-  <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github" revision="27d1d3dfa6be859d92bdc3ce87a34b68f7e10804"/>
-  <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github" revision="f0d822fad2a163d1ee32ed3b4c0359245140e19b"/>
+  <project name="meta-arm" path="layers/meta-arm" remote="yocto" revision="64131db424abad32b94c2690ff73f1a4f424a83d"/>
+  <project name="landing-teams/working/arm/meta-arm-image" path="layers/meta-arm-image" remote="linaro" revision="080371d1b4536a68b8966e216be5b68d4cda6dce"/>
+  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="98bfa31c7c10fb2ddb6bd7922cd27c5ad7389f6c"/>
+
+  <project name="meta-yocto" path="layers/meta-yocto" remote="yocto" revision="3f6857be9be9ab5e2ede9a416c212487357eec0d" />
+  <project name="openembedded/bitbake" path="bitbake" remote="github"  revision="4618da2094189e4d814b7d65672cb65c86c0626a"/>
+  <project name="openembedded/meta-linaro" path="layers/meta-linaro" remote="linaro" revision="85200688fda62d6542d4524d402992d45e93b24e"/>
+  <project name="openembedded/meta-openembedded" path="layers/meta-openembedded" remote="github" revision="920161113533074d27dc93c521815380fdf20275"/>
+  <project name="openembedded/openembedded-core" path="layers/openembedded-core" remote="github" revision="1795f30d8ab73d35710ca99064c51190dc84853e"/>
+  <project name="openembedded/community/meta-kernel" path="layers/meta-kernel" remote="gitlab" revision="58a589c5aad5417abd099a961e3c1a5b083cdb90"/>
 </manifest>
