@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://git.openembedded.org/" name="openembedded"/>
+  <remote name="linaro" fetch="http://git.linaro.org"/>
+  <remote fetch="https://gitlab.com/" name="gitlab" />
+
+  <project name="landing-teams/working/arm/yocto-platform-config" groups="android,bsp" path="bsp/conf" remote="linaro" revision="35067ff9150827b147c98fd85c9df2084de47cf0">
+    <linkfile dest="bsp/setup-environment" src="setup-environment"/>
+  </project>
+
+  <project name="meta-yocto" path="bsp/layers/meta-yocto" groups="android,bsp" remote="yocto" revision="432b365f48f58ec0d9692a93607b65edd098ca1a"/>
+  <project name="bitbake" path="bsp/bitbake" groups="android,bsp" remote="openembedded"  revision="9747211cbb45401cbf4dd0409e9c80c648a178c6"/>
+  <project name="meta-openembedded" path="bsp/layers/meta-openembedded" groups="android,bsp" remote="openembedded" revision="cc6fc6b1641ab23089c1e3bba11e0c6394f0867c"/>
+  <project name="meta-python2" path="bsp/layers/meta-python2" groups="android,bsp" remote="openembedded" revision="e2ef0dd8fa13d6b96e44773b09d07e4817d0a44d"/>
+  <project name="openembedded/community/meta-kernel" path="bsp/layers/meta-kernel" groups="android,bsp" remote="gitlab" revision="64a936a0a6ac5355292b0bf667b5b08adba7c65e"/>
+  <project name="openembedded-core" path="bsp/layers/openembedded-core" groups="android,bsp" remote="openembedded" revision="97e986030ef33dbc43f8e18f7721b98ee381e29b"/>
+  <project name="landing-teams/working/arm/yocto-recipes" path="bsp/layers/meta-arm" remote="linaro" groups="android,bsp" revision="56514201adf965bffd81d49328df0c019c15e292"/>
+  <project name="landing-teams/working/arm/model-scripts" path="bsp/run-scripts" remote="linaro"  groups="android,bsp" revision="efd71bfc1d464c65b9525549c026ffa88397e61e"/>
+</manifest>

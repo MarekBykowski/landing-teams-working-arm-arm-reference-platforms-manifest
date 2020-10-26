@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+   <include name="tc0-bsp.xml" />
+   <include name="tc0-android.xml" />
+</manifest>
