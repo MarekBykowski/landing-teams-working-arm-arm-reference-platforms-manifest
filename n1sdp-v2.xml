@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+   <include name="n1sdp-bsp.xml" />
+   <include name="n1sdp-ubuntu.xml" />
+</manifest>

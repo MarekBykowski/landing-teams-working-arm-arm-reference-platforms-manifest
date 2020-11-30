@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="linaro" fetch="http://git.linaro.org"/>
+  <remote fetch="https://git.savannah.gnu.org" name="gnugit"/>
+
+  <project path="ubuntu/linux" groups="ubuntu" name="landing-teams/working/arm/kernel-release" remote="linaro" revision="84baaae9e751c058717d9702438429257f077f03" upstream="n1sdp"/>
+  <project path="ubuntu/grub" groups="ubuntu" name="git/grub" remote="gnugit" revision="71f9e4ac44142af52c3fc1860436cf9e432bf764" upstream="master"/>
+  <project path="ubuntu/build-scripts" groups="ubuntu" name="landing-teams/working/arm/build-scripts" remote="linaro" revision="93cd27fdedc8e854d4e1e85b141dacadec1e1bc6" upstream="n1sdp-v2"/>
+
+</manifest>
