@@ -15,7 +15,7 @@
   <project path="grub" name="git/grub" remote="gnugit" revision="71f9e4ac44142af52c3fc1860436cf9e432bf764" upstream="master"/>
   <project path="tools/acpica" name="acpica/acpica" remote="github" revision="ba04ee3db1042c88cf4189a26a4ad506f856dd9a" upstream="master"/>
   <project path="linux" name="landing-teams/working/arm/kernel-release" remote="linaro" revision="84baaae9e751c058717d9702438429257f077f03" upstream="n1sdp"/>
-  <project name="landing-teams/working/arm/build-scripts" path="build-scripts" remote="linaro" revision="fd3d4832ecb6074bb8a4672afe202d81d67881c3" upstream="n1sdp"/>
+  <project name="landing-teams/working/arm/build-scripts" path="build-scripts" remote="linaro" revision="a10f06fee909305d2441a936a1accc72c0d34d4a" upstream="n1sdp"/>
   <project name="landing-teams/working/arm/ramdisk" path="ramdisk" remote="linaro" revision="b57c098ca0561ff39aa70b3fe2c795b7a0108717" upstream="master"/>
   <project name="landing-teams/working/arm/uefi-tools.git" path="tools/uefi-tools" remote="linaro" revision="2c9cffcff80e6318c312771ae5bffd48bc23b6dc" upstream="n1sdp"/>
   <project name="landing-teams/working/arm/n1sdp-pcie-quirk.git" path="n1sdp-pcie-quirk" remote="linaro" revision="04b7e76d0fe6481a803f58e54e008a1489d713a5" upstream="master"/>
