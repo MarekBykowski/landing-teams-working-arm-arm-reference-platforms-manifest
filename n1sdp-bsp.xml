@@ -11,7 +11,7 @@
 
   <project name="meta-yocto" path="bsp/layers/meta-yocto" groups="ubuntu,bsp" remote="yocto" revision="269f81c2b2ac64219c65953bc56bd41317a8db0f" />
   <project name="poky" path="bsp" remote="yocto" groups="ubuntu,bsp" revision="9b58e1d1a87c1b33b180f71799cb32b3ce31211e" />
-  <project name="meta-arm" path="bsp/layers/meta-arm" groups="ubuntu,bsp" remote="yocto" revision="784ef62cc4b22770b2b7b30f04fa9db10e85a6db" />
+  <project name="meta-arm" path="bsp/layers/meta-arm" groups="ubuntu,bsp" remote="yocto" revision="79360345fb23a42471a0c5bbdb819d991f816d66" />
   <project name="bitbake" path="bsp/bitbake" groups="ubuntu,bsp" remote="openembedded" revision="fec2b85689bba1d26ad6f376bc11cc29bb27cbe5"/>
   <project name="meta-openembedded" path="bsp/layers/meta-openembedded" groups="ubuntu,bsp" remote="openembedded" revision="b9dcf17700014dec679307dc1247882dccd439ca"/>
   <project name="openembedded-core" path="bsp/layers/openembedded-core" groups="ubuntu,bsp" remote="openembedded" revision="12bee66a42a7c2a38789ddb37cb098bcbf0b3841"/>
