@@ -14,7 +14,7 @@
   </project>
   <project name="meta-arm" path="layers/meta-arm" remote="yocto" revision="7f5a3b06ee33d62d95a887e9aaaa6408eb362e36"/>
   <project name="landing-teams/working/arm/meta-arm-image" path="layers/meta-arm-image" remote="linaro" revision="b4029e2ef591c9db1853f73cb8ef3a9a01114980"/>
-  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="b03c760a17a873410548ab31022ded25f2fea8e3"/>
+  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="b12eb5abfa367a4d6734b3ee2d05bc95e6c70632"/>
 
   <project name="meta-yocto" path="layers/meta-yocto" remote="yocto" revision="269f81c2b2ac64219c65953bc56bd41317a8db0f" />
   <project name="openembedded/bitbake" path="bitbake" remote="github"  revision="22b8c53205f8915b33d1e0ad6a666dcacc01491d"/>
