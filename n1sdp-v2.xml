@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <manifest>
+   <remote name="linaro" fetch="http://git.linaro.org"/>
+
    <include name="n1sdp-bsp.xml" />
    <include name="n1sdp-ubuntu.xml" />
+
+   <project path="docs" groups="ubuntu,bsp" name="landing-teams/working/arm/arm-reference-platforms.git" remote="linaro" revision="refs/tags/N1SDP-2020.12.15" upstream="n1sdp-v2"/>
+
 </manifest>
