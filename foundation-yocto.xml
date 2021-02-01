@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com" name="github"/>
+  <remote fetch="https://git.yoctoproject.org/git" name="yocto"/>
+  <remote fetch="https://git.openembedded.org/" name="openembedded"/>
+  <remote fetch="https://gitlab.com" name="gitlab"/>
+  <remote fetch="https://github.com/MarekBykowski/" name="MarekBykowski"/>
+  <remote fetch="http://git.linaro.org" name="linaro"/>
+  <project name="landing-teams-working-arm-yocto-platform-config" path="conf" remote="MarekBykowski" revision="refs/tags/FOUNDATION-ARMV8-2021.01.29">
+    <linkfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+  <project name="meta-yocto" path="layers/meta-yocto" remote="yocto" revision="432b365f48f58ec0d9692a93607b65edd098ca1a"/>
+  <project name="bitbake" path="bitbake" remote="openembedded"  revision="4618da2094189e4d814b7d65672cb65c86c0626a"/>
+  <project name="meta-openembedded" path="layers/meta-openembedded" remote="openembedded" revision="cc6fc6b1641ab23089c1e3bba11e0c6394f0867c"/>
+  <project name="openembedded-core" path="layers/openembedded-core" remote="openembedded" revision="7ce425fa1295a9dca48f8474be58db3ac8aa540d"/>
+  <project name="meta-arm" path="layers/meta-arm" remote="yocto" revision="191f62e2465068dce3a389c2e2d103ca81300398"/>
+  <project name="openembedded/community/meta-kernel" path="layers/meta-kernel" remote="gitlab" revision="58a589c5aad5417abd099a961e3c1a5b083cdb90"/>
+  <project name="landing-teams/working/arm/model-scripts" path="run-scripts" remote="linaro" revision="refs/tags/BASEFVP-2020.08.06"/>
+</manifest>
